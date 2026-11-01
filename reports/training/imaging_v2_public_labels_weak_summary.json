@@ -1,0 +1,81 @@
+{
+  "best_value": 0.5031164139166645,
+  "configuration": {
+    "accumulation_steps": 4,
+    "amp_dtype": "bfloat16",
+    "backbone_learning_rate": 1e-05,
+    "checkpoint_every_studies": 500,
+    "encoder_chunk_size": 64,
+    "epochs": 3,
+    "gradient_clip_norm": 1.0,
+    "head_learning_rate": 0.0003,
+    "name": "weak_pretrain",
+    "patience": null,
+    "seed": 20260905,
+    "selection_metric": "loss",
+    "slices_per_series": 8,
+    "weight_decay": 0.01
+  },
+  "counts": {
+    "epochs_completed": 3,
+    "training_studies": 3914,
+    "validation_studies": 435
+  },
+  "external_artifacts": [
+    "weak_pretrain/latest.pt",
+    "weak_pretrain/best.pt"
+  ],
+  "generated_at": "2026-09-05T14:33:59.810814+00:00",
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.7120413272187122,
+      "validation": {
+        "loss": 0.5441036536090675,
+        "studies": 435
+      }
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.669881185944067,
+      "validation": {
+        "loss": 0.5561686197916667,
+        "studies": 435
+      }
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.6406327663032327,
+      "validation": {
+        "loss": 0.5031164139166645,
+        "studies": 435
+      }
+    }
+  ],
+  "implementation_sha256": "2e72ae4690b952c47168db841e01961a519ed086be0763ad25193b592f4114b3",
+  "positive_target_weights": {
+    "ACL": 1.7740319967269897,
+    "Baker's": 1.473021149635315,
+    "Contusion": 1.7421737909317017,
+    "Effusion": 1.0,
+    "Fracture": 2.2716798782348633,
+    "Lateral Meniscus": 1.897660493850708,
+    "Lateral OA": 1.5228995084762573,
+    "MCL": 2.1425724029541016,
+    "Medial Meniscus": 1.1115593910217285,
+    "Medial OA": 1.2566384077072144,
+    "PF OA": 1.0778100490570068,
+    "Synovitis": 1.6547800302505493
+  },
+  "privacy": "Identifier-free aggregate training metrics only; checkpoints remain external.",
+  "runtime_seconds_this_call": 1731.180823306,
+  "source_sha256": {
+    "cache_config.json": "28d501230fb56b7004d77f3b138760079177dc3b37af954a2e383493f08d4eee",
+    "cache_manifest.csv": "5b90d680d6ee71a91375822c4822d6e37f3d91cc0400cf5ec32482a43c7ed227",
+    "gold_folds.csv": "2992542fa5bab17202aab54030d9cc1493a540da48d22a0675eef01c1e280a42",
+    "train.csv": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+    "weak_labels.csv": "6d5aec0af2b392505e34a70e255efee807fed34a7f7ccb2c3a0305f15cef4ff6"
+  },
+  "status": "complete",
+  "trainable_signature": "b5166024354903d711fc43cb1757de5cbaceffbf4450945c2250840581c09280"
+}

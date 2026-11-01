@@ -1,0 +1,209 @@
+{
+  "brier_score": 0.1602559187837998,
+  "fold_aggregate": {
+    "macro_auc_mean": 0.8124509479717814,
+    "macro_auc_sample_standard_deviation": 0.05374303937646534,
+    "macro_auc_weighted_mean": 0.8119651979565773
+  },
+  "folds": {
+    "0": {
+      "loss": 0.449329096203049,
+      "macro_auc": 0.8754464285714286,
+      "per_target_auc": {
+        "ACL": 1.0,
+        "Baker's": 0.9259259259259259,
+        "Contusion": 0.9375,
+        "Effusion": 1.0,
+        "Fracture": 0.9375,
+        "Lateral Meniscus": 0.8,
+        "Lateral OA": 0.65,
+        "MCL": 0.8,
+        "Medial Meniscus": 0.9428571428571428,
+        "Medial OA": 0.8518518518518519,
+        "PF OA": 0.6875,
+        "Synovitis": 0.9722222222222222
+      },
+      "studies": 12
+    },
+    "1": {
+      "loss": 0.5114717483520508,
+      "macro_auc": 0.7981867283950618,
+      "per_target_auc": {
+        "ACL": 0.6875,
+        "Baker's": 1.0,
+        "Contusion": 0.875,
+        "Effusion": 1.0,
+        "Fracture": 0.875,
+        "Lateral Meniscus": 0.8,
+        "Lateral OA": 0.8518518518518519,
+        "MCL": 0.6,
+        "Medial Meniscus": 0.9714285714285714,
+        "Medial OA": 0.8888888888888888,
+        "PF OA": 0.5142857142857142,
+        "Synovitis": 0.5142857142857142
+      },
+      "studies": 12
+    },
+    "2": {
+      "loss": 0.5672234172622362,
+      "macro_auc": 0.7355461860670194,
+      "per_target_auc": {
+        "ACL": 0.625,
+        "Baker's": 0.7037037037037037,
+        "Contusion": 0.71875,
+        "Effusion": 0.8285714285714286,
+        "Fracture": 0.7407407407407407,
+        "Lateral Meniscus": 0.7142857142857143,
+        "Lateral OA": 0.5,
+        "MCL": 0.6,
+        "Medial Meniscus": 0.5714285714285714,
+        "Medial OA": 0.9629629629629629,
+        "PF OA": 1.0,
+        "Synovitis": 0.8611111111111112
+      },
+      "studies": 12
+    },
+    "3": {
+      "loss": 0.47219322486357257,
+      "macro_auc": 0.8496693121693122,
+      "per_target_auc": {
+        "ACL": 0.7333333333333333,
+        "Baker's": 1.0,
+        "Contusion": 0.6785714285714286,
+        "Effusion": 1.0,
+        "Fracture": 0.5833333333333334,
+        "Lateral Meniscus": 1.0,
+        "Lateral OA": 0.7222222222222222,
+        "MCL": 1.0,
+        "Medial Meniscus": 0.75,
+        "Medial OA": 1.0,
+        "PF OA": 0.9285714285714286,
+        "Synovitis": 0.8
+      },
+      "studies": 11
+    },
+    "4": {
+      "loss": 0.4851339825175025,
+      "macro_auc": 0.8034060846560847,
+      "per_target_auc": {
+        "ACL": 0.7666666666666667,
+        "Baker's": 0.8888888888888888,
+        "Contusion": 0.875,
+        "Effusion": 0.9583333333333334,
+        "Fracture": 0.8928571428571429,
+        "Lateral Meniscus": 0.6785714285714286,
+        "Lateral OA": 0.8888888888888888,
+        "MCL": 0.5,
+        "Medial Meniscus": 0.7142857142857143,
+        "Medial OA": 0.9583333333333334,
+        "PF OA": 0.7857142857142857,
+        "Synovitis": 0.7333333333333333
+      },
+      "studies": 11
+    }
+  },
+  "generated_at": "2026-09-05T15:47:34.833521+00:00",
+  "log_loss": 0.4977050060911825,
+  "macro_auc": 0.7835434593176708,
+  "negatives": {
+    "ACL": 34,
+    "Baker's": 46,
+    "Contusion": 39,
+    "Effusion": 23,
+    "Fracture": 40,
+    "Lateral Meniscus": 35,
+    "Lateral OA": 47,
+    "MCL": 49,
+    "Medial Meniscus": 32,
+    "Medial OA": 43,
+    "PF OA": 37,
+    "Synovitis": 31
+  },
+  "observed_prevalence": {
+    "ACL": 0.41379310344827586,
+    "Baker's": 0.20689655172413793,
+    "Contusion": 0.3275862068965517,
+    "Effusion": 0.603448275862069,
+    "Fracture": 0.3103448275862069,
+    "Lateral Meniscus": 0.39655172413793105,
+    "Lateral OA": 0.1896551724137931,
+    "MCL": 0.15517241379310345,
+    "Medial Meniscus": 0.4482758620689655,
+    "Medial OA": 0.25862068965517243,
+    "PF OA": 0.3620689655172414,
+    "Synovitis": 0.46551724137931033
+  },
+  "per_target_auc": {
+    "ACL": 0.7549019607843137,
+    "Baker's": 0.8894927536231884,
+    "Contusion": 0.8218623481781376,
+    "Effusion": 0.9192546583850931,
+    "Fracture": 0.8027777777777778,
+    "Lateral Meniscus": 0.7329192546583851,
+    "Lateral OA": 0.6518375241779497,
+    "MCL": 0.6031746031746031,
+    "Medial Meniscus": 0.7800480769230769,
+    "Medial OA": 0.8883720930232558,
+    "PF OA": 0.7657657657657657,
+    "Synovitis": 0.7921146953405018
+  },
+  "per_target_brier_score": {
+    "ACL": 0.1997103129394032,
+    "Baker's": 0.08872309288840129,
+    "Contusion": 0.16032010447039965,
+    "Effusion": 0.12119515463264384,
+    "Fracture": 0.14938969413943212,
+    "Lateral Meniscus": 0.20558910131290825,
+    "Lateral OA": 0.16094863431530923,
+    "MCL": 0.1489989602880988,
+    "Medial Meniscus": 0.19532012279890154,
+    "Medial OA": 0.11459325213046359,
+    "PF OA": 0.18787165478743978,
+    "Synovitis": 0.19041094070219608
+  },
+  "per_target_log_loss": {
+    "ACL": 0.5890055411929491,
+    "Baker's": 0.3370957084256819,
+    "Contusion": 0.4966037962013682,
+    "Effusion": 0.37827485758617835,
+    "Fracture": 0.4728589663498759,
+    "Lateral Meniscus": 0.5892349565524273,
+    "Lateral OA": 0.49931871357540414,
+    "MCL": 0.4689541146465229,
+    "Medial Meniscus": 0.5765828644466189,
+    "Medial OA": 0.38700392439925685,
+    "PF OA": 0.6036799039582331,
+    "Synovitis": 0.5738467257596739
+  },
+  "positives": {
+    "ACL": 24,
+    "Baker's": 12,
+    "Contusion": 19,
+    "Effusion": 35,
+    "Fracture": 18,
+    "Lateral Meniscus": 23,
+    "Lateral OA": 11,
+    "MCL": 9,
+    "Medial Meniscus": 26,
+    "Medial OA": 15,
+    "PF OA": 21,
+    "Synovitis": 27
+  },
+  "predicted_prevalence": {
+    "ACL": 0.4073030386633914,
+    "Baker's": 0.2827132683536359,
+    "Contusion": 0.36564754036351527,
+    "Effusion": 0.6369077331739766,
+    "Fracture": 0.3600190505385399,
+    "Lateral Meniscus": 0.4267349012902585,
+    "Lateral OA": 0.2614104698315777,
+    "MCL": 0.2436651724294342,
+    "Medial Meniscus": 0.47838660083903833,
+    "Medial OA": 0.3454402221451064,
+    "PF OA": 0.41334179713358654,
+    "Synovitis": 0.45242698336469717
+  },
+  "privacy": "Identifier-free aggregate OOF metrics only; OOF rows remain external.",
+  "status": "complete",
+  "studies": 58
+}

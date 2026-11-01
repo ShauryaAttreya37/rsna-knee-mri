@@ -1,0 +1,42 @@
+# Competition data and derived datasets
+data/raw/
+data/interim/
+data/processed/
+data/external/
+manifests/
+
+# Credentials and local environment files
+.env
+.env.*
+!.env.example
+kaggle.json
+.kaggle/
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Models, experiment outputs, and logs
+artifacts/
+checkpoints/
+models/
+outputs/
+runs/
+wandb/
+*.ckpt
+*.pth
+*.pt
+*.onnx
+
+# Notebook and editor artifacts
+.ipynb_checkpoints/
+.idea/
+.vscode/
+
+# Generated submissions
+submission.csv

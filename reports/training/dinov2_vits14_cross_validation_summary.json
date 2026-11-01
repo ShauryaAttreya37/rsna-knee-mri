@@ -1,0 +1,108 @@
+{
+  "status": "complete",
+  "generated_at": "2026-09-05T05:53:07+00:00",
+  "privacy": "Identifier-free aggregate metrics only; checkpoints and study-level predictions remain external.",
+  "training_commit": "dba84edc7437c7732e17fe1daa8b219269c27c06",
+  "model": {
+    "backbone": "DINOv2 ViT-S/14",
+    "input": "2.5D adjacent-slice triplets",
+    "pooling": "target-specific slice and series attention",
+    "metadata": "plane, sequence, and physical series metadata"
+  },
+  "protocol": {
+    "gold_studies": 58,
+    "weak_only_studies": 4349,
+    "folds": 5,
+    "fold_sizes": [
+      12,
+      12,
+      12,
+      11,
+      11
+    ],
+    "selection_metric": "macro_auc",
+    "early_stopping_patience": 7,
+    "gold_leakage_into_weak_pretraining": false
+  },
+  "fold_results": [
+    {
+      "fold": 0,
+      "validation_studies": 12,
+      "completed_epochs": 11,
+      "best_epoch": 4,
+      "best_macro_auc": 0.7085372574955908,
+      "best_validation_loss": 0.5465705965956053,
+      "best_binary_accuracy": 0.7430555555555556
+    },
+    {
+      "fold": 1,
+      "validation_studies": 12,
+      "completed_epochs": 27,
+      "best_epoch": 20,
+      "best_macro_auc": 0.6929315476190476,
+      "best_validation_loss": 0.6159457812706629,
+      "best_binary_accuracy": 0.6527777777777778
+    },
+    {
+      "fold": 2,
+      "validation_studies": 12,
+      "completed_epochs": 10,
+      "best_epoch": 3,
+      "best_macro_auc": 0.6767609126984127,
+      "best_validation_loss": 0.5739901959896088,
+      "best_binary_accuracy": 0.7013888888888888
+    },
+    {
+      "fold": 3,
+      "validation_studies": 11,
+      "completed_epochs": 30,
+      "best_epoch": 26,
+      "best_macro_auc": 0.7866402116402115,
+      "best_validation_loss": 0.7545370337637988,
+      "best_binary_accuracy": 0.7272727272727273
+    },
+    {
+      "fold": 4,
+      "validation_studies": 11,
+      "completed_epochs": 14,
+      "best_epoch": 7,
+      "best_macro_auc": 0.7545634920634919,
+      "best_validation_loss": 0.5224773734807968,
+      "best_binary_accuracy": 0.7045454545454546
+    }
+  ],
+  "fold_aggregate": {
+    "macro_auc_mean": 0.7238866843033509,
+    "macro_auc_sample_standard_deviation": 0.04553497410618085,
+    "macro_auc_minimum": 0.6767609126984127,
+    "macro_auc_maximum": 0.7866402116402115,
+    "aggregation": "Unweighted mean and sample standard deviation of the five fold-best macro AUC values."
+  },
+  "mean_per_target_auc": {
+    "ACL": 0.6833333333333333,
+    "MCL": 0.65,
+    "Medial Meniscus": 0.61,
+    "Lateral Meniscus": 0.7914285714285715,
+    "Medial OA": 0.8842592592592592,
+    "Lateral OA": 0.75,
+    "PF OA": 0.7855357142857142,
+    "Effusion": 0.8466666666666667,
+    "Synovitis": 0.8342857142857143,
+    "Baker's": 0.7985185185185185,
+    "Contusion": 0.5345238095238095,
+    "Fracture": 0.5180886243386243
+  },
+  "checkpoint_location": "/home/shaurya/rsna-data/models/imaging_v1/gold_fold_{0..4}/best.pt",
+  "limitations": [
+    "The aggregate is a mean of fold-level AUC values, not a pooled out-of-fold AUC over all 58 studies.",
+    "Each validation fold contains only 11 or 12 studies, so fold and per-target AUC estimates are noisy.",
+    "Calibration and threshold-independent pooled out-of-fold analysis remain pending.",
+    "Contusion and fracture mean AUC remain near chance and require targeted error analysis."
+  ],
+  "next_actions": [
+    "Generate predictions from each fold-best checkpoint for its untouched gold fold and compute pooled out-of-fold macro and per-target AUC.",
+    "Measure calibration and inspect identifier-free error aggregates, especially for contusion and fracture.",
+    "Benchmark the five-checkpoint imaging ensemble and limited test-time augmentation on the offline inference path.",
+    "Package checkpoints and dependencies for the final Kaggle notebook only after inference runtime is below the safety budget."
+  ]
+}

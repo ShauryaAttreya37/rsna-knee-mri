@@ -1,0 +1,38 @@
+{
+  "status": "complete",
+  "generated_at": "2026-09-05T09:49:54.295159+00:00",
+  "offline": true,
+  "privacy": "Identifier-free aggregate inference report only.",
+  "model": {
+    "checkpoints": 5,
+    "backbone": "DINOv2 ViT-S/14",
+    "ensemble": "Per-target average of within-model test-study percentile ranks"
+  },
+  "example_test": {
+    "studies": 3,
+    "series": 15,
+    "decoded_pixel_arrays": 557,
+    "elapsed_seconds": 8.476978903999992,
+    "studies_per_second": 0.3538996656679662,
+    "gpu": "NVIDIA L4",
+    "amp_dtype": "bfloat16"
+  },
+  "submission_validation": {
+    "rows": 3,
+    "targets": 12,
+    "minimum_probability": 0.16666666666666666,
+    "maximum_probability": 0.8333333333333334,
+    "identifiers_unique": true,
+    "identifiers_match_test_set": true,
+    "identifiers_in_sample_order": true,
+    "columns_exact": true,
+    "probabilities_finite": true,
+    "probabilities_in_range": true
+  },
+  "runtime_projection": {
+    "reference_studies": 4407,
+    "linear_hours_at_observed_l4_rate": 3.459,
+    "status": "provisional",
+    "limitation": "Three studies cannot capture hidden-test hardware, startup, tail-latency, or distribution variance. Require a larger benchmark before final runtime acceptance."
+  }
+}

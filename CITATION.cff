@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use or adapt this code, please credit the author."
+title: "RSNA Knee MRI Abnormality Detection"
+type: software
+authors:
+  - family-names: Attreya
+    given-names: Shaurya
+    alias: ShauryaAttreya37
+repository-code: "https://github.com/ShauryaAttreya37/rsna-knee-mri"
+url: "https://shauryaattreya37.github.io/rsna-knee-mri/"
+license: MIT
+date-released: 2026-11-01
+keywords:
+  - medical imaging
+  - knee MRI
+  - DICOM
+  - weak supervision
+  - DINOv2
+  - Kaggle

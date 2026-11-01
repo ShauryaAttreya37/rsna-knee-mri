@@ -1,0 +1,9 @@
+# Python dependencies for the fold-0 training gate and the first imaging baseline.
+# Install the CUDA wheel first with scripts/setup_training_env.sh; this pin then
+# prevents a later dependency install from silently changing the PyTorch version.
+-r requirements-dev.txt
+
+torch==2.7.0
+ipykernel==7.3.0
+jupytext==1.19.5
+matplotlib==3.11.1

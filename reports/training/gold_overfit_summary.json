@@ -1,0 +1,297 @@
+{
+  "acceptance_thresholds": {
+    "maximum_loss": 0.05,
+    "minimum_binary_accuracy": 1.0,
+    "minimum_macro_auc": 0.99
+  },
+  "configuration": {
+    "epochs_completed": 172,
+    "epochs_requested": 200,
+    "fold": 0,
+    "learning_rate": 0.003,
+    "model": "tiny_conv_slice_encoder_mean_pool_series_attention",
+    "output_size": 224,
+    "sampled_slices_per_series": 16,
+    "seed": 20260828,
+    "spatial_transform": "physical_full_fov_aspect_fit_zero_pad",
+    "targets": 12,
+    "weight_decay": 0.0
+  },
+  "counts": {
+    "cache_bytes": 99557120,
+    "cache_hits": 62,
+    "cache_misses": 0,
+    "decoded_images": 0,
+    "excluded_gold_series": 0,
+    "gold_series_before_exclusions": 62,
+    "series": 62,
+    "studies": 12,
+    "total_gold_studies": 58
+  },
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.8",
+    "device": "cuda",
+    "gpu_name": "Tesla T4",
+    "python": "3.12.3",
+    "torch": "2.7.0+cu128"
+  },
+  "external_artifacts": [
+    "gold_overfit_cache_v1/",
+    "gold_overfit_v1/tiny_multiseries_overfit.pt"
+  ],
+  "generated_at": "2026-09-04T06:28:07.371217+00:00",
+  "label_counts": {
+    "ACL": {
+      "negative": 7,
+      "positive": 5
+    },
+    "Baker's": {
+      "negative": 9,
+      "positive": 3
+    },
+    "Contusion": {
+      "negative": 8,
+      "positive": 4
+    },
+    "Effusion": {
+      "negative": 5,
+      "positive": 7
+    },
+    "Fracture": {
+      "negative": 8,
+      "positive": 4
+    },
+    "Lateral Meniscus": {
+      "negative": 7,
+      "positive": 5
+    },
+    "Lateral OA": {
+      "negative": 10,
+      "positive": 2
+    },
+    "MCL": {
+      "negative": 10,
+      "positive": 2
+    },
+    "Medial Meniscus": {
+      "negative": 7,
+      "positive": 5
+    },
+    "Medial OA": {
+      "negative": 9,
+      "positive": 3
+    },
+    "PF OA": {
+      "negative": 8,
+      "positive": 4
+    },
+    "Synovitis": {
+      "negative": 6,
+      "positive": 6
+    }
+  },
+  "metrics": {
+    "best": {
+      "binary_accuracy": 1.0,
+      "loss": 0.04015451325297666,
+      "macro_auc": 1.0,
+      "minimum_target_auc": 1.0
+    },
+    "final": {
+      "binary_accuracy": 1.0,
+      "loss": 0.04015451325297666,
+      "macro_auc": 1.0,
+      "minimum_target_auc": 1.0
+    },
+    "history": [
+      {
+        "binary_accuracy": 0.4861111111111111,
+        "epoch": 0,
+        "loss": 0.6998875538508097,
+        "macro_auc": 0.49644786155202825,
+        "minimum_target_auc": 0.2571428571428571
+      },
+      {
+        "binary_accuracy": 0.6666666666666666,
+        "epoch": 1,
+        "loss": 0.625128356118997,
+        "macro_auc": 0.49484126984126986,
+        "minimum_target_auc": 0.09375
+      },
+      {
+        "binary_accuracy": 0.6666666666666666,
+        "epoch": 2,
+        "loss": 0.6167164966464043,
+        "macro_auc": 0.5691220238095238,
+        "minimum_target_auc": 0.3333333333333333
+      },
+      {
+        "binary_accuracy": 0.6666666666666666,
+        "epoch": 3,
+        "loss": 0.6165943418939909,
+        "macro_auc": 0.574032738095238,
+        "minimum_target_auc": 0.3333333333333333
+      },
+      {
+        "binary_accuracy": 0.6666666666666666,
+        "epoch": 4,
+        "loss": 0.6149137963851293,
+        "macro_auc": 0.5824156746031746,
+        "minimum_target_auc": 0.3333333333333333
+      },
+      {
+        "binary_accuracy": 0.6666666666666666,
+        "epoch": 5,
+        "loss": 0.6172186732292175,
+        "macro_auc": 0.6044174382716049,
+        "minimum_target_auc": 0.3333333333333333
+      },
+      {
+        "binary_accuracy": 0.6666666666666666,
+        "epoch": 10,
+        "loss": 0.6120682780941328,
+        "macro_auc": 0.646985229276896,
+        "minimum_target_auc": 0.40625
+      },
+      {
+        "binary_accuracy": 0.6736111111111112,
+        "epoch": 20,
+        "loss": 0.6107898702224096,
+        "macro_auc": 0.6402695105820105,
+        "minimum_target_auc": 0.375
+      },
+      {
+        "binary_accuracy": 0.6666666666666666,
+        "epoch": 30,
+        "loss": 0.6159654880563418,
+        "macro_auc": 0.5830109126984128,
+        "minimum_target_auc": 0.3125
+      },
+      {
+        "binary_accuracy": 0.6666666666666666,
+        "epoch": 40,
+        "loss": 0.6140088066458702,
+        "macro_auc": 0.6015845458553791,
+        "minimum_target_auc": 0.45714285714285713
+      },
+      {
+        "binary_accuracy": 0.6666666666666666,
+        "epoch": 50,
+        "loss": 0.6108846242229143,
+        "macro_auc": 0.6271136463844796,
+        "minimum_target_auc": 0.5
+      },
+      {
+        "binary_accuracy": 0.6736111111111112,
+        "epoch": 60,
+        "loss": 0.6054540152351061,
+        "macro_auc": 0.6138751102292769,
+        "minimum_target_auc": 0.4166666666666667
+      },
+      {
+        "binary_accuracy": 0.6736111111111112,
+        "epoch": 70,
+        "loss": 0.582107755045096,
+        "macro_auc": 0.7280478395061728,
+        "minimum_target_auc": 0.4375
+      },
+      {
+        "binary_accuracy": 0.6944444444444444,
+        "epoch": 80,
+        "loss": 0.5524152566989263,
+        "macro_auc": 0.6699790564373899,
+        "minimum_target_auc": 0.34375
+      },
+      {
+        "binary_accuracy": 0.7361111111111112,
+        "epoch": 90,
+        "loss": 0.510742982228597,
+        "macro_auc": 0.7292989417989418,
+        "minimum_target_auc": 0.5625
+      },
+      {
+        "binary_accuracy": 0.7638888888888888,
+        "epoch": 100,
+        "loss": 0.44915371884902316,
+        "macro_auc": 0.8091958774250441,
+        "minimum_target_auc": 0.6
+      },
+      {
+        "binary_accuracy": 0.8263888888888888,
+        "epoch": 110,
+        "loss": 0.3869363097473979,
+        "macro_auc": 0.8811425264550264,
+        "minimum_target_auc": 0.65625
+      },
+      {
+        "binary_accuracy": 0.8194444444444444,
+        "epoch": 120,
+        "loss": 0.4018165492452681,
+        "macro_auc": 0.8627617945326279,
+        "minimum_target_auc": 0.7428571428571429
+      },
+      {
+        "binary_accuracy": 0.9097222222222222,
+        "epoch": 130,
+        "loss": 0.21849939304714402,
+        "macro_auc": 0.9706679894179895,
+        "minimum_target_auc": 0.8857142857142857
+      },
+      {
+        "binary_accuracy": 0.8958333333333334,
+        "epoch": 140,
+        "loss": 0.2683193602909644,
+        "macro_auc": 0.9452298280423279,
+        "minimum_target_auc": 0.8125
+      },
+      {
+        "binary_accuracy": 0.8680555555555556,
+        "epoch": 150,
+        "loss": 0.33196165529079735,
+        "macro_auc": 0.939470348324515,
+        "minimum_target_auc": 0.8571428571428571
+      },
+      {
+        "binary_accuracy": 0.9583333333333334,
+        "epoch": 160,
+        "loss": 0.13616507719658935,
+        "macro_auc": 0.9874255952380953,
+        "minimum_target_auc": 0.90625
+      },
+      {
+        "binary_accuracy": 0.9791666666666666,
+        "epoch": 170,
+        "loss": 0.06688062348985113,
+        "macro_auc": 0.9924107142857143,
+        "minimum_target_auc": 0.9375
+      },
+      {
+        "binary_accuracy": 1.0,
+        "epoch": 172,
+        "loss": 0.04015451325297666,
+        "macro_auc": 1.0,
+        "minimum_target_auc": 1.0
+      }
+    ],
+    "initial": {
+      "binary_accuracy": 0.4861111111111111,
+      "loss": 0.6998875538508097,
+      "macro_auc": 0.49644786155202825,
+      "minimum_target_auc": 0.2571428571428571
+    }
+  },
+  "privacy": "Aggregate same-cohort training statistics only; identifiers, derived pixels, cache mappings, and checkpoints remain external.",
+  "purpose": "Pipeline wiring and memorization sanity test only. Metrics are measured on the same gold studies used for optimization and are not a validation or generalization estimate.",
+  "runtime": {
+    "elapsed_seconds": 99.61077620299989,
+    "study_epochs_per_second": 20.720649699523577
+  },
+  "source_sha256": {
+    "excluded_series.csv": "1e16cf6ba7dd1aa164ec27811ab884af3f403fc0f7f05b803a688f025a2c5d01",
+    "gold_folds.csv": "2992542fa5bab17202aab54030d9cc1493a540da48d22a0675eef01c1e280a42",
+    "train.csv": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+    "train_series.csv": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3"
+  },
+  "status": "pass"
+}

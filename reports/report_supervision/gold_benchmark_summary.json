@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "generated_at": "2026-09-04T06:52:02.753837+00:00",
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "gold_studies_evaluated": 58,
+  "runtime_seconds": 553.1916666880002,
+  "seconds_per_report": 9.537787356689659,
+  "metrics": {
+    "macro_roc_auc": 0.7533116416191273,
+    "overall_binary_accuracy": 0.771551724137931,
+    "per_target_auc": {
+      "ACL": 0.7892156862745098,
+      "MCL": 0.9058956916099773,
+      "Medial Meniscus": 0.7692307692307693,
+      "Lateral Meniscus": 0.8130434782608695,
+      "Medial OA": 0.7751937984496124,
+      "Lateral OA": 0.7707930367504836,
+      "PF OA": 0.6274131274131274,
+      "Effusion": 0.6527950310559006,
+      "Synovitis": 0.7150537634408602,
+      "Baker's": 0.8840579710144928,
+      "Contusion": 0.6821862348178138,
+      "Fracture": 0.6548611111111111
+    }
+  }
+}

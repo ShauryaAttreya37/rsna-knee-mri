@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-08-27T15:36:45.249262+00:00",
+  "metric": {
+    "constant_prediction_sanity_check": {
+      "macro_auc": 0.5,
+      "negatives": {
+        "ACL": 34,
+        "Baker's": 46,
+        "Contusion": 39,
+        "Effusion": 23,
+        "Fracture": 40,
+        "Lateral Meniscus": 35,
+        "Lateral OA": 47,
+        "MCL": 49,
+        "Medial Meniscus": 32,
+        "Medial OA": 43,
+        "PF OA": 37,
+        "Synovitis": 31
+      },
+      "per_target_auc": {
+        "ACL": 0.5,
+        "Baker's": 0.5,
+        "Contusion": 0.5,
+        "Effusion": 0.5,
+        "Fracture": 0.5,
+        "Lateral Meniscus": 0.5,
+        "Lateral OA": 0.5,
+        "MCL": 0.5,
+        "Medial Meniscus": 0.5,
+        "Medial OA": 0.5,
+        "PF OA": 0.5,
+        "Synovitis": 0.5
+      },
+      "positives": {
+        "ACL": 24,
+        "Baker's": 12,
+        "Contusion": 19,
+        "Effusion": 35,
+        "Fracture": 18,
+        "Lateral Meniscus": 23,
+        "Lateral OA": 11,
+        "MCL": 9,
+        "Medial Meniscus": 26,
+        "Medial OA": 15,
+        "PF OA": 21,
+        "Synovitis": 27
+      }
+    },
+    "definition": "Unweighted mean of the twelve per-target binary ROC AUC values.",
+    "gold_studies": 58,
+    "name": "macro_roc_auc"
+  },
+  "offline": true,
+  "privacy": "Aggregate counts, target names, and metrics only; no study identifiers or report text are included.",
+  "status": "pass",
+  "submission": {
+    "constant_probability": 0.5,
+    "filename": "submission.csv",
+    "sha256": "bf96706cfea74f089b0450290206e659bf5ee2a17a8d732774e1f2a5bcac53e4",
+    "validation": {
+      "columns_exact": true,
+      "identifiers_in_test_order": true,
+      "identifiers_unique": true,
+      "maximum_probability": 0.5,
+      "minimum_probability": 0.5,
+      "probabilities_finite": true,
+      "probabilities_in_range": true,
+      "rows": 3,
+      "targets": 12
+    }
+  }
+}

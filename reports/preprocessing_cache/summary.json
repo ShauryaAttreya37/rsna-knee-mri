@@ -1,0 +1,69 @@
+{
+  "configuration": {
+    "config_sha256": "9e5bb8e57a09659e8a5ae59e683634eee1ed6c1204a2e4b051466051a6b79d50",
+    "dependency_versions": {
+      "numpy": "2.5.2",
+      "pydicom": "3.0.2"
+    },
+    "dtype": "float16",
+    "implementation_sha256": {
+      "dicom_loader.py": "97f3bf40ef75bd15bf7b4fbf9f4f5e88795fc06ed442b10300a38da79c0352b5",
+      "preprocessing_cache.py": "11446a07e90c0c9aef24d588d04ebad83756228914c2f55f5a528144f371917e"
+    },
+    "normalization_percentiles": [
+      1.0,
+      99.0
+    ],
+    "output_size": 224,
+    "sampled_slices_per_series": 16,
+    "slice_sampling": "rounded_uniform_linspace",
+    "spatial_transform": "physical_full_fov_aspect_fit_zero_pad",
+    "workers": 4
+  },
+  "counts": {
+    "cache_hits": 24368,
+    "cache_misses_completed": 0,
+    "completed_series": 24368,
+    "decoded_images_this_run": 0,
+    "eligible_series": 24368,
+    "excluded_series": 3,
+    "failures": 0,
+    "orphaned_tensors_recomputed": 0,
+    "remaining_series": 0,
+    "series_before_exclusions": 24371,
+    "studies": 4407
+  },
+  "error_class_counts": {},
+  "external_artifacts": {
+    "cache_config": "cache_config.json",
+    "cache_manifest": "cache_manifest.csv",
+    "cache_manifest_sha256": "5b90d680d6ee71a91375822c4822d6e37f3d91cc0400cf5ec32482a43c7ed227",
+    "failures": "failures.csv",
+    "progress": "progress.json",
+    "tensor_tree": "studies/"
+  },
+  "generated_at": "2026-09-04T13:59:52.958224+00:00",
+  "privacy": "Identifier-free aggregate cache statistics only; study/series IDs, tensor mappings, and failures remain in the external cache.",
+  "runtime": {
+    "decoded_series_per_second": 0.0,
+    "elapsed_seconds": 492.13410188800026,
+    "summed_worker_decode_seconds": 0.0
+  },
+  "series_by_plane": {
+    "Axial": 5896,
+    "Coronal": 8608,
+    "Sagittal": 9864
+  },
+  "source_sha256": {
+    "excluded_series.csv": "1e16cf6ba7dd1aa164ec27811ab884af3f403fc0f7f05b803a688f025a2c5d01",
+    "train.csv": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+    "train_series.csv": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3"
+  },
+  "status": "complete",
+  "storage": {
+    "estimated_tensor_payload_bytes_full": 39126040576,
+    "free_bytes_after_run": 414972268544,
+    "minimum_free_margin_bytes": 21474836480,
+    "tensor_bytes_completed": 39129159680
+  }
+}

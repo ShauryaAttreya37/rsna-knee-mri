@@ -1,0 +1,79 @@
+{
+  "status": "complete",
+  "generated_at": "2026-09-05T09:27:21.179662+00:00",
+  "privacy": "Identifier-free aggregate metrics only; study-level OOF rows remain external.",
+  "training_commit": "dba84edc7437c7732e17fe1daa8b219269c27c06",
+  "evaluation_commit": "f2db184",
+  "protocol": {
+    "studies": 58,
+    "folds": 5,
+    "fold_sizes": [12, 12, 12, 11, 11],
+    "prediction_rule": "Each fold-best checkpoint predicts only its untouched gold fold."
+  },
+  "fold_macro_auc": [
+    0.7085372574955908,
+    0.6929315476190476,
+    0.6767609126984127,
+    0.7866402116402115,
+    0.7545634920634919
+  ],
+  "fold_macro_auc_mean": 0.7238866843033509,
+  "fold_macro_auc_sample_standard_deviation": 0.04553497410618085,
+  "pooled_oof": {
+    "macro_auc": 0.6862855670184925,
+    "brier_score": 0.19685974352694383,
+    "log_loss": 0.6014696122430269,
+    "per_target_auc": {
+      "ACL": 0.6348039215686274,
+      "MCL": 0.6439909297052154,
+      "Medial Meniscus": 0.5985576923076923,
+      "Lateral Meniscus": 0.7540372670807454,
+      "Medial OA": 0.8108527131782945,
+      "Lateral OA": 0.6963249516441006,
+      "PF OA": 0.7348777348777349,
+      "Effusion": 0.8149068322981367,
+      "Synovitis": 0.7491039426523297,
+      "Baker's": 0.7409420289855072,
+      "Contusion": 0.5209176788124157,
+      "Fracture": 0.5361111111111111
+    },
+    "per_target_brier_score": {
+      "ACL": 0.24980038558284107,
+      "MCL": 0.13318419175513302,
+      "Medial Meniscus": 0.2558744200471865,
+      "Lateral Meniscus": 0.19492174668213877,
+      "Medial OA": 0.1492121652769253,
+      "Lateral OA": 0.1428791460211528,
+      "PF OA": 0.20196433287952767,
+      "Effusion": 0.16739478981471442,
+      "Synovitis": 0.2118940825901388,
+      "Baker's": 0.15119911571511588,
+      "Contusion": 0.26053144376299253,
+      "Fracture": 0.24346110219545894
+    }
+  },
+  "prevalence_only_reference": {
+    "brier_score": 0.210266,
+    "log_loss": 0.608758,
+    "interpretation": "The imaging model improves calibration losses only slightly over gold-set prevalence predictions."
+  },
+  "score_alignment_diagnostic": {
+    "pooled_auc_after_label_free_per_fold_logit_standardization": 0.717252,
+    "use": "Diagnostic only; fold identity is unavailable for competition test data.",
+    "interpretation": "Most of the gap between mean fold AUC and raw pooled AUC comes from checkpoint score-scale drift, but discrimination remains far below the competitive target."
+  },
+  "largest_fold_predicted_mean_ranges": {
+    "Synovitis": 0.403,
+    "Medial OA": 0.388,
+    "ACL": 0.349,
+    "PF OA": 0.341,
+    "Lateral Meniscus": 0.334,
+    "Baker's": 0.33
+  },
+  "decisions": [
+    "Do not spend GPU credit repeating the current recipe.",
+    "Treat Contusion, Fracture, and Medial Meniscus as first-order modeling failures.",
+    "Build the first valid five-checkpoint Kaggle inference submission before larger experiments.",
+    "Require cheap fixed-fold evidence before promoting any change to five-fold training."
+  ]
+}

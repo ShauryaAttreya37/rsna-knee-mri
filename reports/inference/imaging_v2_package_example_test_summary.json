@@ -1,0 +1,67 @@
+{
+  "checkpoints": [
+    {
+      "best_value": 0.8754464285714286,
+      "epoch": 15,
+      "fold": 0
+    },
+    {
+      "best_value": 0.7981867283950618,
+      "epoch": 5,
+      "fold": 1
+    },
+    {
+      "best_value": 0.7355461860670194,
+      "epoch": 9,
+      "fold": 2
+    },
+    {
+      "best_value": 0.8496693121693122,
+      "epoch": 2,
+      "fold": 3
+    },
+    {
+      "best_value": 0.8034060846560847,
+      "epoch": 8,
+      "fold": 4
+    }
+  ],
+  "generated_at": "2026-09-06T03:11:03.156835+00:00",
+  "offline": true,
+  "privacy": "Identifier-free aggregate inference report only.",
+  "runtime": {
+    "decoded_pixel_arrays": 557,
+    "elapsed_seconds": 5.396577067999999,
+    "ensemble": "per-target average of within-model test-study percentile ranks",
+    "models": 5,
+    "probability_mean_range": [
+      0.04010446108877659,
+      0.8583910584449768
+    ],
+    "rank_average_range": [
+      0.16666666666666666,
+      0.8333333333333334
+    ],
+    "series": 15,
+    "studies": 3,
+    "studies_per_second": 0.5559079324168378
+  },
+  "runtime_versions": {
+    "numpy": "2.5.2",
+    "pydicom": "3.0.2",
+    "torch": "2.7.0+cu128"
+  },
+  "status": "complete",
+  "submission_validation": {
+    "columns_exact": true,
+    "identifiers_in_sample_order": true,
+    "identifiers_match_test_set": true,
+    "identifiers_unique": true,
+    "maximum_probability": 0.8333333333333334,
+    "minimum_probability": 0.16666666666666666,
+    "probabilities_finite": true,
+    "probabilities_in_range": true,
+    "rows": 3,
+    "targets": 12
+  }
+}

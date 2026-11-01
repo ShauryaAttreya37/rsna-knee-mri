@@ -1,0 +1,1127 @@
+{
+  "candidate_square_crop_coverage": [
+    {
+      "all_series": 24386,
+      "analyzable_series": 24386,
+      "by_anatomical_plane": {
+        "Axial": {
+          "analyzable_series": 5902,
+          "coverage_of_analyzable_series": 0.9839037614368011,
+          "covered_without_padding": 5807
+        },
+        "Coronal": {
+          "analyzable_series": 8613,
+          "coverage_of_analyzable_series": 0.9993033786137234,
+          "covered_without_padding": 8607
+        },
+        "Sagittal": {
+          "analyzable_series": 9871,
+          "coverage_of_analyzable_series": 1.0,
+          "covered_without_padding": 9871
+        }
+      },
+      "coverage_of_all_series": 0.9958582793406052,
+      "coverage_of_analyzable_series": 0.9958582793406052,
+      "covered_without_padding": 24285,
+      "meets_minimum_coverage_in_every_plane": true,
+      "minimum_anatomical_plane_coverage": 0.9839037614368011,
+      "padding_required": 101,
+      "square_crop_mm": 120.0
+    },
+    {
+      "all_series": 24386,
+      "analyzable_series": 24386,
+      "by_anatomical_plane": {
+        "Axial": {
+          "analyzable_series": 5902,
+          "coverage_of_analyzable_series": 0.9283293798712301,
+          "covered_without_padding": 5479
+        },
+        "Coronal": {
+          "analyzable_series": 8613,
+          "coverage_of_analyzable_series": 0.9213978869151283,
+          "covered_without_padding": 7936
+        },
+        "Sagittal": {
+          "analyzable_series": 9871,
+          "coverage_of_analyzable_series": 0.9693040218822815,
+          "covered_without_padding": 9568
+        }
+      },
+      "coverage_of_all_series": 0.9424669892561306,
+      "coverage_of_analyzable_series": 0.9424669892561306,
+      "covered_without_padding": 22983,
+      "meets_minimum_coverage_in_every_plane": true,
+      "minimum_anatomical_plane_coverage": 0.9213978869151283,
+      "padding_required": 1403,
+      "square_crop_mm": 140.0
+    },
+    {
+      "all_series": 24386,
+      "analyzable_series": 24386,
+      "by_anatomical_plane": {
+        "Axial": {
+          "analyzable_series": 5902,
+          "coverage_of_analyzable_series": 0.6633344628939343,
+          "covered_without_padding": 3915
+        },
+        "Coronal": {
+          "analyzable_series": 8613,
+          "coverage_of_analyzable_series": 0.6617903169627307,
+          "covered_without_padding": 5700
+        },
+        "Sagittal": {
+          "analyzable_series": 9871,
+          "coverage_of_analyzable_series": 0.782899402289535,
+          "covered_without_padding": 7728
+        }
+      },
+      "coverage_of_all_series": 0.7111867464938899,
+      "coverage_of_analyzable_series": 0.7111867464938899,
+      "covered_without_padding": 17343,
+      "meets_minimum_coverage_in_every_plane": false,
+      "minimum_anatomical_plane_coverage": 0.6617903169627307,
+      "padding_required": 7043,
+      "square_crop_mm": 160.0
+    },
+    {
+      "all_series": 24386,
+      "analyzable_series": 24386,
+      "by_anatomical_plane": {
+        "Axial": {
+          "analyzable_series": 5902,
+          "coverage_of_analyzable_series": 0.13825821755337173,
+          "covered_without_padding": 816
+        },
+        "Coronal": {
+          "analyzable_series": 8613,
+          "coverage_of_analyzable_series": 0.13618948101706724,
+          "covered_without_padding": 1173
+        },
+        "Sagittal": {
+          "analyzable_series": 9871,
+          "coverage_of_analyzable_series": 0.19562354371390944,
+          "covered_without_padding": 1931
+        }
+      },
+      "coverage_of_all_series": 0.16074797014680556,
+      "coverage_of_analyzable_series": 0.16074797014680556,
+      "covered_without_padding": 3920,
+      "meets_minimum_coverage_in_every_plane": false,
+      "minimum_anatomical_plane_coverage": 0.13618948101706724,
+      "padding_required": 20466,
+      "square_crop_mm": 180.0
+    },
+    {
+      "all_series": 24386,
+      "analyzable_series": 24386,
+      "by_anatomical_plane": {
+        "Axial": {
+          "analyzable_series": 5902,
+          "coverage_of_analyzable_series": 0.011182649949169773,
+          "covered_without_padding": 66
+        },
+        "Coronal": {
+          "analyzable_series": 8613,
+          "coverage_of_analyzable_series": 0.01892488099384651,
+          "covered_without_padding": 163
+        },
+        "Sagittal": {
+          "analyzable_series": 9871,
+          "coverage_of_analyzable_series": 0.016411711072839633,
+          "covered_without_padding": 162
+        }
+      },
+      "coverage_of_all_series": 0.01603378987943902,
+      "coverage_of_analyzable_series": 0.01603378987943902,
+      "covered_without_padding": 391,
+      "meets_minimum_coverage_in_every_plane": false,
+      "minimum_anatomical_plane_coverage": 0.011182649949169773,
+      "padding_required": 23995,
+      "square_crop_mm": 200.0
+    }
+  ],
+  "checks": {
+    "manifest_row_count_mismatch": 0,
+    "metadata_inconsistent_rows": 0,
+    "no_analyzable_series": 0,
+    "noncontiguous_series": 0,
+    "series_count_mismatch": 0
+  },
+  "counts": {
+    "analyzable_series": 24386,
+    "excluded_series": 0,
+    "manifest_rows": 819635,
+    "series": 24386
+  },
+  "distributions": {
+    "by_anatomical_plane": {
+      "Axial": {
+        "analyzable_series": 5902,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 5902,
+            "max": 322.00064,
+            "mean": 167.39376566413193,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 150.016,
+            "p50": 160.0,
+            "p75": 169.984,
+            "p95": 220.0064
+          },
+          "minimum_in_plane_dimension": {
+            "count": 5902,
+            "max": 300.0,
+            "mean": 160.22371796098045,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 150.016,
+            "p50": 160.0,
+            "p75": 168.9999961852992,
+            "p95": 180.0192
+          },
+          "row": {
+            "count": 5902,
+            "max": 320.0,
+            "mean": 161.08914255863095,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 150.016,
+            "p50": 160.0,
+            "p75": 169.984,
+            "p95": 180.1324462890624
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 5902,
+            "max": 1.171875,
+            "mean": 0.3322383530913399,
+            "min": 0.07280710339546,
+            "p05": 0.1562,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.3711,
+            "p95": 0.5625
+          },
+          "row": {
+            "count": 5902,
+            "max": 1.171875,
+            "mean": 0.33223834936378993,
+            "min": 0.07280710339546,
+            "p05": 0.1562,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.3711,
+            "p95": 0.5625
+          }
+        },
+        "total_series": 5902
+      },
+      "Coronal": {
+        "analyzable_series": 8613,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 8613,
+            "max": 310.016,
+            "mean": 161.62345693188973,
+            "min": 110.0,
+            "p05": 135.0,
+            "p25": 155.0,
+            "p50": 160.0,
+            "p75": 169.984,
+            "p95": 180.03199999999998
+          },
+          "minimum_in_plane_dimension": {
+            "count": 8613,
+            "max": 310.016,
+            "mean": 161.34008508375322,
+            "min": 110.0,
+            "p05": 135.0,
+            "p25": 154.99999523162398,
+            "p50": 160.0,
+            "p75": 169.984,
+            "p95": 180.0192
+          },
+          "row": {
+            "count": 8613,
+            "max": 310.016,
+            "mean": 162.81153175030323,
+            "min": 113.00000381469697,
+            "p05": 139.99999999999872,
+            "p25": 159.99984,
+            "p50": 160.0,
+            "p75": 169.984,
+            "p95": 180.03199999999998
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 8613,
+            "max": 0.9375,
+            "mean": 0.337967103811578,
+            "min": 0.1367,
+            "p05": 0.167411,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.5625
+          },
+          "row": {
+            "count": 8613,
+            "max": 0.9375,
+            "mean": 0.3379671081074099,
+            "min": 0.1367,
+            "p05": 0.167411,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.5625
+          }
+        },
+        "total_series": 8613
+      },
+      "Sagittal": {
+        "analyzable_series": 9871,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 9871,
+            "max": 361.0,
+            "mean": 165.83908750624136,
+            "min": 123.81158351898144,
+            "p05": 149.9904,
+            "p25": 160.0,
+            "p50": 160.00012800000002,
+            "p75": 170.0352,
+            "p95": 190.0032
+          },
+          "minimum_in_plane_dimension": {
+            "count": 9871,
+            "max": 280.0,
+            "mean": 165.68614112865862,
+            "min": 123.81158351898144,
+            "p05": 148.5,
+            "p25": 160.0,
+            "p50": 160.00012800000002,
+            "p75": 170.0352,
+            "p95": 190.0032
+          },
+          "row": {
+            "count": 9871,
+            "max": 280.0,
+            "mean": 166.05694730083198,
+            "min": 123.81158351898144,
+            "p05": 148.5,
+            "p25": 160.0,
+            "p50": 160.00012800000002,
+            "p75": 172.00000381469442,
+            "p95": 190.0032
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 9871,
+            "max": 0.9375,
+            "mean": 0.34443349389179984,
+            "min": 0.125,
+            "p05": 0.1674,
+            "p25": 0.25,
+            "p50": 0.332,
+            "p75": 0.40000000596046,
+            "p95": 0.625
+          },
+          "row": {
+            "count": 9871,
+            "max": 0.9375,
+            "mean": 0.3444334997675976,
+            "min": 0.125,
+            "p05": 0.1674,
+            "p25": 0.25,
+            "p50": 0.332,
+            "p75": 0.40000000596046,
+            "p95": 0.625
+          }
+        },
+        "total_series": 9871
+      }
+    },
+    "by_anatomical_plane_and_sequence_flags": {
+      "plane=Axial,fluid_sensitive=0,fat_suppression=0": {
+        "analyzable_series": 1180,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 1180,
+            "max": 300.0,
+            "mean": 163.63287791721527,
+            "min": 85.16128778457343,
+            "p05": 149.952,
+            "p25": 149.9904,
+            "p50": 160.0,
+            "p75": 170.0352,
+            "p95": 190.0032
+          },
+          "minimum_in_plane_dimension": {
+            "count": 1180,
+            "max": 300.0,
+            "mean": 163.52906571382547,
+            "min": 85.16128778457343,
+            "p05": 149.952,
+            "p25": 149.9904,
+            "p50": 160.0,
+            "p75": 170.0352,
+            "p95": 190.0032
+          },
+          "row": {
+            "count": 1180,
+            "max": 300.0,
+            "mean": 164.54324029009663,
+            "min": 85.16128778457343,
+            "p05": 149.952,
+            "p25": 149.999872,
+            "p50": 160.00000381469664,
+            "p75": 179.99999678134296,
+            "p95": 199.9872
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 1180,
+            "max": 1.171875,
+            "mean": 0.2782299882357007,
+            "min": 0.1562,
+            "p05": 0.1562,
+            "p25": 0.1953,
+            "p50": 0.22727273404598,
+            "p75": 0.3516,
+            "p95": 0.5878910999999982
+          },
+          "row": {
+            "count": 1180,
+            "max": 1.171875,
+            "mean": 0.2782299882357007,
+            "min": 0.1562,
+            "p05": 0.1562,
+            "p25": 0.1953,
+            "p50": 0.22727273404598,
+            "p75": 0.3516,
+            "p95": 0.5878910999999982
+          }
+        },
+        "total_series": 1180
+      },
+      "plane=Axial,fluid_sensitive=1,fat_suppression=1": {
+        "analyzable_series": 4722,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 4722,
+            "max": 322.00064,
+            "mean": 168.33358937047703,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 153.75,
+            "p50": 160.0,
+            "p75": 169.984,
+            "p95": 320.0
+          },
+          "minimum_in_plane_dimension": {
+            "count": 4722,
+            "max": 250.0096,
+            "mean": 159.39773101723688,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 153.75,
+            "p50": 160.0,
+            "p75": 167.9999942779488,
+            "p95": 180.0192
+          },
+          "row": {
+            "count": 4722,
+            "max": 320.0,
+            "mean": 160.22598387097116,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 154.99999999999903,
+            "p50": 160.0,
+            "p75": 168.87226295470944,
+            "p95": 180.0192
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 4722,
+            "max": 0.88541668653488,
+            "mean": 0.3457347255033802,
+            "min": 0.07280710339546,
+            "p05": 0.22659937500000002,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.5625
+          },
+          "row": {
+            "count": 4722,
+            "max": 0.88541668653488,
+            "mean": 0.34573472084433743,
+            "min": 0.07280710339546,
+            "p05": 0.22659937500000002,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.5625
+          }
+        },
+        "total_series": 4722
+      },
+      "plane=Coronal,fluid_sensitive=0,fat_suppression=0": {
+        "analyzable_series": 3986,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 3986,
+            "max": 270.0,
+            "mean": 162.4091524805002,
+            "min": 110.0,
+            "p05": 139.9808,
+            "p25": 159.99984,
+            "p50": 160.00000476836993,
+            "p75": 169.984,
+            "p95": 180.0192
+          },
+          "minimum_in_plane_dimension": {
+            "count": 3986,
+            "max": 270.0,
+            "mean": 162.20977550307924,
+            "min": 110.0,
+            "p05": 139.9808,
+            "p25": 159.99984,
+            "p50": 160.00000476836993,
+            "p75": 169.984,
+            "p95": 180.0192
+          },
+          "row": {
+            "count": 3986,
+            "max": 270.0,
+            "mean": 163.5911162516994,
+            "min": 113.00000381469697,
+            "p05": 149.992704,
+            "p25": 159.99999618530302,
+            "p50": 160.00000476836993,
+            "p75": 169.984,
+            "p95": 180.0192
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 3986,
+            "max": 0.9375,
+            "mean": 0.32836301259787515,
+            "min": 0.1367,
+            "p05": 0.1563,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.625
+          },
+          "row": {
+            "count": 3986,
+            "max": 0.9375,
+            "mean": 0.3283630166119243,
+            "min": 0.1367,
+            "p05": 0.1563,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.625
+          }
+        },
+        "total_series": 3986
+      },
+      "plane=Coronal,fluid_sensitive=1,fat_suppression=1": {
+        "analyzable_series": 4627,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 4627,
+            "max": 310.016,
+            "mean": 160.94660747073536,
+            "min": 113.20312500000179,
+            "p05": 135.0,
+            "p25": 150.016,
+            "p50": 160.0,
+            "p75": 169.984,
+            "p95": 180.03199999999998
+          },
+          "minimum_in_plane_dimension": {
+            "count": 4627,
+            "max": 310.016,
+            "mean": 160.59087695506648,
+            "min": 113.20312500000179,
+            "p05": 135.0,
+            "p25": 150.0,
+            "p50": 160.0,
+            "p75": 169.984,
+            "p95": 180.03199999999998
+          },
+          "row": {
+            "count": 4627,
+            "max": 310.016,
+            "mean": 162.13994674434576,
+            "min": 130.00000000000128,
+            "p05": 139.9808,
+            "p25": 155.00000095367184,
+            "p50": 160.0,
+            "p75": 169.99987199999998,
+            "p95": 185.73160042762166
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 4627,
+            "max": 0.8594,
+            "mean": 0.346240695248323,
+            "min": 0.1367,
+            "p05": 0.234375,
+            "p25": 0.2656,
+            "p50": 0.32033270597457,
+            "p75": 0.390625,
+            "p95": 0.5625
+          },
+          "row": {
+            "count": 4627,
+            "max": 0.8594,
+            "mean": 0.3462406997869009,
+            "min": 0.1367,
+            "p05": 0.234375,
+            "p25": 0.2656,
+            "p50": 0.32033270597457,
+            "p75": 0.390625,
+            "p95": 0.5625
+          }
+        },
+        "total_series": 4627
+      },
+      "plane=Sagittal,fluid_sensitive=0,fat_suppression=0": {
+        "analyzable_series": 5201,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 5201,
+            "max": 361.0,
+            "mean": 166.7492795702674,
+            "min": 123.81158351898144,
+            "p05": 149.9904,
+            "p25": 160.0,
+            "p50": 160.0032,
+            "p75": 175.00000619888158,
+            "p95": 195.0
+          },
+          "minimum_in_plane_dimension": {
+            "count": 5201,
+            "max": 280.0,
+            "mean": 166.5375235629611,
+            "min": 123.81158351898144,
+            "p05": 149.9904,
+            "p25": 160.0,
+            "p50": 160.00012800000002,
+            "p75": 174.5284438133208,
+            "p95": 192.81701660155903
+          },
+          "row": {
+            "count": 5201,
+            "max": 280.0,
+            "mean": 166.97357267957773,
+            "min": 123.81158351898144,
+            "p05": 149.9904,
+            "p25": 160.0,
+            "p50": 160.0032,
+            "p75": 178.9999961852992,
+            "p95": 195.6491661071736
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 5201,
+            "max": 0.9375,
+            "mean": 0.3366061937431042,
+            "min": 0.1367,
+            "p05": 0.1674,
+            "p25": 0.25151515007019,
+            "p50": 0.332,
+            "p75": 0.40000000596046,
+            "p95": 0.5625
+          },
+          "row": {
+            "count": 5201,
+            "max": 0.9375,
+            "mean": 0.3366061985498721,
+            "min": 0.1367,
+            "p05": 0.1674,
+            "p25": 0.25151515007019,
+            "p50": 0.332,
+            "p75": 0.40000000596046,
+            "p95": 0.5625
+          }
+        },
+        "total_series": 5201
+      },
+      "plane=Sagittal,fluid_sensitive=1,fat_suppression=1": {
+        "analyzable_series": 4670,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 4670,
+            "max": 270.4225463867187,
+            "mean": 164.82540251159477,
+            "min": 129.9968,
+            "p05": 139.9808,
+            "p25": 160.0,
+            "p50": 160.00012800000002,
+            "p75": 170.0352,
+            "p95": 190.00000762939328
+          },
+          "minimum_in_plane_dimension": {
+            "count": 4670,
+            "max": 270.4225463867187,
+            "mean": 164.73795268308962,
+            "min": 129.9968,
+            "p05": 139.9808,
+            "p25": 160.0,
+            "p50": 160.00012800000002,
+            "p75": 170.0352,
+            "p95": 190.0
+          },
+          "row": {
+            "count": 4670,
+            "max": 270.4225463867187,
+            "mean": 165.03609749465278,
+            "min": 129.9968,
+            "p05": 139.9808,
+            "p25": 160.0,
+            "p50": 160.00012800000002,
+            "p75": 170.0352,
+            "p95": 190.0032
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 4670,
+            "max": 0.9375,
+            "mean": 0.35315079326511156,
+            "min": 0.125,
+            "p05": 0.16740495,
+            "p25": 0.25,
+            "p50": 0.332,
+            "p75": 0.41666665673255,
+            "p95": 0.625
+          },
+          "row": {
+            "count": 4670,
+            "max": 0.9375,
+            "mean": 0.35315080033149276,
+            "min": 0.125,
+            "p05": 0.16740495,
+            "p25": 0.25,
+            "p50": 0.332,
+            "p75": 0.41666665673255,
+            "p95": 0.625
+          }
+        },
+        "total_series": 4670
+      }
+    },
+    "by_sequence_flags": {
+      "fluid_sensitive=0,fat_suppression=0": {
+        "analyzable_series": 10367,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 10367,
+            "max": 361.0,
+            "mean": 164.72583011233226,
+            "min": 85.16128778457343,
+            "p05": 149.952,
+            "p25": 159.99999618530302,
+            "p50": 160.0000071525576,
+            "p75": 170.00000381469698,
+            "p95": 190.0032
+          },
+          "minimum_in_plane_dimension": {
+            "count": 10367,
+            "max": 300.0,
+            "mean": 164.53112016480645,
+            "min": 85.16128778457343,
+            "p05": 149.952,
+            "p25": 159.99999618530302,
+            "p50": 160.000007152552,
+            "p75": 170.00000381469698,
+            "p95": 190.0
+          },
+          "row": {
+            "count": 10367,
+            "max": 300.0,
+            "mean": 165.3964275516612,
+            "min": 85.16128778457343,
+            "p05": 149.952,
+            "p25": 160.0,
+            "p50": 160.00012800000002,
+            "p75": 170.000032,
+            "p95": 190.0032
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 10367,
+            "max": 1.171875,
+            "mean": 0.32679224153478753,
+            "min": 0.1367,
+            "p05": 0.1563,
+            "p25": 0.2344,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.5625
+          },
+          "row": {
+            "count": 10367,
+            "max": 1.171875,
+            "mean": 0.3267922454896443,
+            "min": 0.1367,
+            "p05": 0.1563,
+            "p25": 0.2344,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.5625
+          }
+        },
+        "total_series": 10367
+      },
+      "fluid_sensitive=1,fat_suppression=1": {
+        "analyzable_series": 14019,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 14019,
+            "max": 322.00064,
+            "mean": 164.72685580309815,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 153.75,
+            "p50": 160.0,
+            "p75": 170.0,
+            "p95": 190.0032
+          },
+          "minimum_in_plane_dimension": {
+            "count": 14019,
+            "max": 310.016,
+            "mean": 161.57046241276223,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 153.75,
+            "p50": 160.0,
+            "p75": 169.99987199999998,
+            "p95": 180.1324462890624
+          },
+          "row": {
+            "count": 14019,
+            "max": 320.0,
+            "mean": 162.4600331496428,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 159.39910221099424,
+            "p50": 160.0,
+            "p75": 169.99999523162398,
+            "p95": 181.6077804565376
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 14019,
+            "max": 0.9375,
+            "mean": 0.34837215744981975,
+            "min": 0.07280710339546,
+            "p05": 0.2043,
+            "p25": 0.25,
+            "p50": 0.320565,
+            "p75": 0.390626,
+            "p95": 0.5625
+          },
+          "row": {
+            "count": 14019,
+            "max": 0.9375,
+            "mean": 0.3483721597324362,
+            "min": 0.07280710339546,
+            "p05": 0.2043,
+            "p25": 0.25,
+            "p50": 0.320565,
+            "p75": 0.390626,
+            "p95": 0.5625
+          }
+        },
+        "total_series": 14019
+      }
+    },
+    "by_split": {
+      "test": {
+        "analyzable_series": 15,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 15,
+            "max": 320.0,
+            "mean": 176.0029866666667,
+            "min": 149.952,
+            "p05": 149.97888,
+            "p25": 150.016,
+            "p50": 169.984,
+            "p75": 180.0192,
+            "p95": 222.02239999999983
+          },
+          "minimum_in_plane_dimension": {
+            "count": 15,
+            "max": 180.03199999999998,
+            "mean": 165.33632,
+            "min": 149.952,
+            "p05": 149.97888,
+            "p25": 150.016,
+            "p50": 169.984,
+            "p75": 180.0192,
+            "p95": 180.02976
+          },
+          "row": {
+            "count": 15,
+            "max": 200.0,
+            "mean": 168.0029866666667,
+            "min": 149.952,
+            "p05": 149.97888,
+            "p25": 150.016,
+            "p50": 169.984,
+            "p75": 180.0192,
+            "p95": 186.02239999999998
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 15,
+            "max": 0.3516,
+            "mean": 0.28006666666666663,
+            "min": 0.1562,
+            "p05": 0.16404,
+            "p25": 0.2422,
+            "p50": 0.293,
+            "p75": 0.332,
+            "p95": 0.3516
+          },
+          "row": {
+            "count": 15,
+            "max": 0.3516,
+            "mean": 0.28006666666666663,
+            "min": 0.1562,
+            "p05": 0.16404,
+            "p25": 0.2422,
+            "p50": 0.293,
+            "p75": 0.332,
+            "p95": 0.3516
+          }
+        },
+        "total_series": 15
+      },
+      "train": {
+        "analyzable_series": 24371,
+        "excluded_series": 0,
+        "physical_fov_mm": {
+          "column": {
+            "count": 24371,
+            "max": 361.0,
+            "mean": 164.71947919569084,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 159.77205133437855,
+            "p50": 160.00000476836993,
+            "p75": 170.0,
+            "p95": 190.0032
+          },
+          "minimum_in_plane_dimension": {
+            "count": 24371,
+            "max": 310.016,
+            "mean": 162.82755695347186,
+            "min": 70.32719421386496,
+            "p05": 139.9808,
+            "p25": 159.35871887206912,
+            "p50": 160.000002384184,
+            "p75": 170.0,
+            "p95": 182.00000762938882
+          },
+          "row": {
+            "count": 24371,
+            "max": 320.0,
+            "mean": 163.70571270579435,
+            "min": 70.32719421386496,
+            "p05": 139.99999999999872,
+            "p25": 159.99999618530302,
+            "p50": 160.00000476836993,
+            "p75": 170.0,
+            "p95": 189.3162446022003
+          }
+        },
+        "pixel_spacing_mm": {
+          "column": {
+            "count": 24371,
+            "max": 1.171875,
+            "mean": 0.3392344771769794,
+            "min": 0.07280710339546,
+            "p05": 0.1667,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.5625
+          },
+          "row": {
+            "count": 24371,
+            "max": 1.171875,
+            "mean": 0.3392344801723427,
+            "min": 0.07280710339546,
+            "p05": 0.1667,
+            "p25": 0.25,
+            "p50": 0.3125,
+            "p75": 0.390625,
+            "p95": 0.5625
+          }
+        },
+        "total_series": 24371
+      }
+    },
+    "overall": {
+      "analyzable_series": 24386,
+      "excluded_series": 0,
+      "physical_fov_mm": {
+        "column": {
+          "count": 24386,
+          "max": 361.0,
+          "mean": 164.72641976044375,
+          "min": 70.32719421386496,
+          "p05": 139.9808,
+          "p25": 159.70174765586592,
+          "p50": 160.00000476836993,
+          "p75": 170.0,
+          "p95": 190.0032
+        },
+        "minimum_in_plane_dimension": {
+          "count": 24386,
+          "max": 310.016,
+          "mean": 162.8291001112549,
+          "min": 70.32719421386496,
+          "p05": 139.9808,
+          "p25": 159.35871887206912,
+          "p50": 160.000002384184,
+          "p75": 170.0,
+          "p95": 182.00000762938882
+        },
+        "row": {
+          "count": 24386,
+          "max": 320.0,
+          "mean": 163.70835598921158,
+          "min": 70.32719421386496,
+          "p05": 139.99999999999872,
+          "p25": 159.99999618530302,
+          "p50": 160.00000476836993,
+          "p75": 170.0,
+          "p95": 189.33267974853214
+        }
+      },
+      "pixel_spacing_mm": {
+        "column": {
+          "count": 24386,
+          "max": 1.171875,
+          "mean": 0.3391980826408663,
+          "min": 0.07280710339546,
+          "p05": 0.1667,
+          "p25": 0.25,
+          "p50": 0.3125,
+          "p75": 0.390625,
+          "p95": 0.5625
+        },
+        "row": {
+          "count": 24386,
+          "max": 1.171875,
+          "mean": 0.3391980856343872,
+          "min": 0.07280710339546,
+          "p05": 0.1667,
+          "p25": 0.25,
+          "p50": 0.3125,
+          "p75": 0.390625,
+          "p95": 0.5625
+        }
+      },
+      "total_series": 24386
+    }
+  },
+  "generated_at": "2026-08-28T08:33:57.421040+00:00",
+  "manifest_fingerprint": "9e95dd790bbdf2294f1cc026bc3cfb80b45eeceb777603070676eb1cef686abc",
+  "method": {
+    "aggregation_unit": "series",
+    "crop_coverage_definition": "Both in-plane physical FOV dimensions are at least the candidate square crop size; no padding is required.",
+    "physical_fov_definition": "Rows * PixelSpacingRow and Columns * PixelSpacingColumn",
+    "spacing_consistency_absolute_tolerance_mm": 1e-06,
+    "spacing_consistency_relative_tolerance": 0.001
+  },
+  "privacy": "Aggregate statistics only; no study, series, SOP, or file identifiers are included.",
+  "recommendation": {
+    "anatomy_preservation_policy": "full_fov_primary_view_required",
+    "detail_view_in_plane_pixel_spacing_mm": 0.625,
+    "excluded_series_requiring_explicit_handling": 0,
+    "minimum_required_coverage": 0.9,
+    "preprocessing_policy": [
+      "Interpret DICOM PixelSpacing as physical row and column spacing and construct the in-plane image extent before resizing.",
+      "Use the complete physical field of view as the required primary view: resize it to fit the target square while preserving aspect ratio, then pad the shorter dimension symmetrically. Do not crop this view.",
+      "Retain the selected fixed physical window only as an optional high-resolution detail view. Never use it as the sole input because a fixed center crop cannot guarantee complete anatomy.",
+      "Reject or route series with missing, invalid, or inconsistent spacing through an explicit fallback; never silently treat pixel units as mm.",
+      "Continue consensus-normal slice sorting independently of this in-plane resampling policy.",
+      "Visually review representative low-FOV, high-FOV, and off-center series before training to verify full-FOV retention, padding behavior, and any optional detail-view localization."
+    ],
+    "selected_candidate_coverage_of_analyzable_series": 0.9424669892561306,
+    "selected_candidate_minimum_anatomical_plane_coverage": 0.9213978869151283,
+    "selected_square_crop_mm": 140.0,
+    "selected_square_crop_role": "optional_detail_view_only",
+    "selection_rule": "Choose the largest candidate square detail window whose no-padding coverage meets the threshold overall and within every observed anatomical plane; if none qualifies, report the smallest candidate as an uncertified fallback.",
+    "selection_status": "coverage_target_met",
+    "target_output_shape_pixels": [
+      224,
+      224
+    ]
+  },
+  "row_geometry_findings": {
+    "invalid_dimension_rows": 0,
+    "invalid_spacing_column_component_rows": 0,
+    "invalid_spacing_row_component_rows": 0,
+    "invalid_spacing_rows": 0,
+    "metadata_inconsistent_rows": 0,
+    "missing_dimension_rows": 0,
+    "missing_spacing_column_component_rows": 0,
+    "missing_spacing_row_component_rows": 0,
+    "missing_spacing_rows": 0,
+    "non_ok_header_rows": 0,
+    "valid_physical_geometry_rows": 819635
+  },
+  "series_geometry_findings": {
+    "series_analyzable": 24386,
+    "series_excluded_from_physical_analysis": 0,
+    "series_with_inconsistent_column_spacing": 0,
+    "series_with_inconsistent_dimensions": 0,
+    "series_with_inconsistent_row_spacing": 0,
+    "series_with_inconsistent_spacing": 0,
+    "series_with_invalid_dimensions": 0,
+    "series_with_invalid_group_metadata": 0,
+    "series_with_invalid_spacing": 0,
+    "series_with_metadata_inconsistency": 0,
+    "series_with_missing_dimensions": 0,
+    "series_with_missing_spacing": 0,
+    "series_with_non_ok_headers": 0,
+    "series_with_nonfinite_derived_geometry": 0
+  },
+  "status": "pass"
+}

@@ -1,0 +1,50 @@
+{
+  "checks": {
+    "artifact_hashes": {
+      "cache_config_file": "28d501230fb56b7004d77f3b138760079177dc3b37af954a2e383493f08d4eee",
+      "cache_manifest": "5b90d680d6ee71a91375822c4822d6e37f3d91cc0400cf5ec32482a43c7ed227",
+      "excluded_series.csv": "1e16cf6ba7dd1aa164ec27811ab884af3f403fc0f7f05b803a688f025a2c5d01",
+      "preprocessing_report": "c04dce7af0ae2fa17d335294e4bfb35206c33b3daf64a37771f3f109ab3c1fea",
+      "train.csv": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+      "train_series.csv": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+      "weak_labels.csv": "5822b0e50b533636f18a0c531d3cad683bd757e2985e853607d3845230f343e3"
+    },
+    "cache_config_canonical_sha256": "9e5bb8e57a09659e8a5ae59e683634eee1ed6c1204a2e4b051466051a6b79d50",
+    "cache_membership_exact": true,
+    "every_sidecar_verified": true,
+    "every_tensor_sha256_verified": true,
+    "every_tensor_shape_dtype_finite_range_verified": true,
+    "no_temporary_artifacts": true
+  },
+  "counts": {
+    "cache_failures": 0,
+    "cached_sidecars": 24368,
+    "cached_tensors": 24368,
+    "eligible_series": 24368,
+    "example_test_dicoms": 557,
+    "excluded_series": 3,
+    "gold_fold_studies": 58,
+    "source_series": 24371,
+    "training_studies": 4407,
+    "weak_label_studies": 4407
+  },
+  "generated_at": "2026-09-04T14:43:55.908433+00:00",
+  "privacy": "Identifier-free aggregate migration integrity audit.",
+  "runtime": {
+    "elapsed_seconds": 137.114836572,
+    "workers": 4
+  },
+  "series_by_plane": {
+    "Axial": 5896,
+    "Coronal": 8608,
+    "Sagittal": 9864
+  },
+  "status": "pass",
+  "storage": {
+    "tensor_bytes": 39129159680
+  },
+  "tensor_value_range": {
+    "maximum": 1.0,
+    "minimum": 0.0
+  }
+}

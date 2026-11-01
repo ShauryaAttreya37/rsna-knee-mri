@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knee MRI Detection · Shaurya Attreya</title>
+<meta name="description" content="Weakly supervised, multi-series knee MRI abnormality detection for the RSNA 2026 Kaggle challenge. Project and code by Shaurya Attreya.">
+<meta name="author" content="Shaurya Attreya">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" media="(prefers-color-scheme: dark)">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --line: #d1d9e0;
+    --soft: #f6f8fa; --accent: #0b6bcb; --good: #1a7f37; --warn: #9a6700;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --line: #30363d;
+      --soft: #151b23; --accent: #4493f8; --good: #3fb950; --warn: #d29922;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  main, header .wrap, footer .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  header { border-bottom: 1px solid var(--line); padding: 48px 0 32px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.35rem; margin: 48px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 1.05rem; margin: 28px 0 8px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .byline { font-size: 1.1rem; margin: 0 0 16px; }
+  .byline strong { font-weight: 600; }
+  .lede { color: var(--muted); font-size: 1.05rem; max-width: 680px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .btn {
+    display: inline-block; padding: 8px 16px; border: 1px solid var(--line);
+    border-radius: 6px; background: var(--soft); color: var(--fg); font-weight: 500; font-size: .95rem;
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn:hover { text-decoration: none; filter: brightness(1.05); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 24px 0 0; }
+  .stat { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; background: var(--soft); }
+  .stat b { display: block; font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+  .stat span { color: var(--muted); font-size: .88rem; }
+  ol.pipeline { padding-left: 22px; }
+  ol.pipeline li { margin-bottom: 10px; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+  th, td { padding: 7px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  tr:last-child td { border-bottom: 0; }
+  th { background: var(--soft); font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.up { color: var(--good); }
+  td.down { color: var(--warn); }
+  tr.total td { font-weight: 600; background: var(--soft); }
+  td.desc { white-space: normal; min-width: 260px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .88em; }
+  :not(pre) > code { background: var(--soft); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
+  pre { margin: 0; overflow-x: auto; }
+  pre code.hljs { padding: 14px 16px; font-size: .84rem; line-height: 1.5; background: var(--soft); }
+  figure.code { margin: 12px 0 24px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  figure.code figcaption {
+    display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    padding: 8px 14px; border-bottom: 1px solid var(--line); font-size: .85rem; color: var(--muted);
+  }
+  .note { border-left: 3px solid var(--line); padding: 4px 0 4px 14px; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 28px 0 40px; color: var(--muted); font-size: .92rem; }
+  footer p { margin: 0 0 6px; }
+  @media (max-width: 520px) { h1 { font-size: 1.6rem; } header { padding-top: 32px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Knee MRI Abnormality Detection</h1>
+    <p class="byline">by <strong>Shaurya Attreya</strong> · <a href="https://github.com/ShauryaAttreya37">@ShauryaAttreya37</a></p>
+    <p class="lede">
+      A weakly supervised, multi-series deep learning pipeline that predicts twelve knee abnormalities
+      from raw MRI DICOM studies, built for the 2026 RSNA Knee Abnormality Detection challenge on Kaggle.
+      Every module, test, and experiment in this project was designed and written by me.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="https://github.com/ShauryaAttreya37/rsna-knee-mri">View the code on GitHub</a>
+      <a class="btn" href="#code">Code walkthrough</a>
+      <a class="btn" href="https://www.kaggle.com/competitions/rsna-knee-abnormality-detection">Competition</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>819,078</b><span>DICOM slices audited</span></div>
+      <div class="stat"><b>4,407</b><span>studies, only 58 expert-labeled</span></div>
+      <div class="stat"><b>0.686 → 0.784</b><span>pooled out-of-fold macro AUC</span></div>
+      <div class="stat"><b>12,000+</b><span>lines of library code</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<h2 id="problem">The problem</h2>
+<p>
+  Each study is a full knee MRI session: several series (sagittal, coronal, axial; fluid-sensitive or not;
+  fat-suppressed or not), each made of dozens of DICOM slices from scanners all over the world.
+  The task is to output a probability for each of twelve findings: ACL and MCL injury, medial and lateral
+  meniscal tears, medial, lateral, and patellofemoral osteoarthritis, effusion, synovitis, Baker's cyst,
+  bone contusion, and fracture.
+</p>
+<p>
+  The hard part is supervision. Only <b>58 of 4,407</b> training studies have expert labels. Every study has its
+  original radiology report, often not in English, but reports are <em>not</em> available at test time,
+  so the final model must work from images alone.
+</p>
+
+<h2 id="approach">Approach</h2>
+<ol class="pipeline">
+  <li><b>Audit before modelling.</b> A read-only, resumable inventory of every DICOM header and an exhaustive
+    pixel-decode pass produced explicit exclusion policies for corrupt series, plus geometry audits of
+    slice orientation, pixel spacing, and physical field of view.
+    (<a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/dicom_audit.py">dicom_audit.py</a>,
+    <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/physical_geometry_audit.py">physical_geometry_audit.py</a>)</li>
+  <li><b>Turn reports into labels.</b> A local Qwen2.5-3B-Instruct extractor read multilingual reports and emitted
+    per-finding probabilities for the 4,349 unlabeled studies. Benchmarked against the 58 gold studies, it reached
+    macro AUC 0.753. An equal-mean ensemble of three public CC0 label sets reached 0.896 and became the weak target.
+    (<a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/report_extractor.py">report_extractor.py</a>,
+    <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/weak_label_benchmark.py">weak_label_benchmark.py</a>)</li>
+  <li><b>Leakage-safe validation.</b> Deterministic multilabel-stratified five-fold splits over the gold studies.
+    Gold studies are removed from weak pretraining entirely, so no validation image is ever seen in training.
+    (<a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/gold_folds.py">gold_folds.py</a>)</li>
+  <li><b>Model.</b> A DINOv2 ViT-S/14 encoder embeds each slice. Target-specific attention pools slices into a
+    series vector, series metadata is appended, and a second target-specific attention pools series into a study
+    vector. Weak pretraining on 4,349 studies is followed by gold fine-tuning per fold.
+    (<a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/imaging_training.py">imaging_training.py</a>)</li>
+  <li><b>Offline inference.</b> Each test study is decoded once, every fold checkpoint scores it, and scores are
+    rank-averaged per target to cancel calibration drift between checkpoints. The submission is validated for
+    exact columns, identifier order, and finite in-range probabilities before it is written.
+    (<a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/imaging_inference.py">imaging_inference.py</a>,
+    <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/submission.py">submission.py</a>)</li>
+</ol>
+
+<h2 id="results">Results</h2>
+<p>
+  Out-of-fold AUC pooled across all 58 gold studies, where every prediction comes from a model that never saw that study.
+  Between v1 and v2, <b>only the weak-label source changed</b>; architecture, cache, folds, and fine-tuning settings were held fixed.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Finding</th><th class="num">v1: Qwen labels</th><th class="num">v2: label ensemble</th><th class="num">Change</th></tr></thead>
+  <tbody>
+    <tr><td>ACL</td><td class="num">0.635</td><td class="num">0.755</td><td class="num up">+0.120</td></tr>
+    <tr><td>MCL</td><td class="num">0.644</td><td class="num">0.603</td><td class="num down">−0.041</td></tr>
+    <tr><td>Medial meniscus</td><td class="num">0.599</td><td class="num">0.780</td><td class="num up">+0.181</td></tr>
+    <tr><td>Lateral meniscus</td><td class="num">0.754</td><td class="num">0.733</td><td class="num down">−0.021</td></tr>
+    <tr><td>Medial OA</td><td class="num">0.811</td><td class="num">0.888</td><td class="num up">+0.078</td></tr>
+    <tr><td>Lateral OA</td><td class="num">0.696</td><td class="num">0.652</td><td class="num down">−0.044</td></tr>
+    <tr><td>Patellofemoral OA</td><td class="num">0.735</td><td class="num">0.766</td><td class="num up">+0.031</td></tr>
+    <tr><td>Effusion</td><td class="num">0.815</td><td class="num">0.919</td><td class="num up">+0.104</td></tr>
+    <tr><td>Synovitis</td><td class="num">0.749</td><td class="num">0.792</td><td class="num up">+0.043</td></tr>
+    <tr><td>Baker's cyst</td><td class="num">0.741</td><td class="num">0.889</td><td class="num up">+0.149</td></tr>
+    <tr><td>Bone contusion</td><td class="num">0.521</td><td class="num">0.822</td><td class="num up">+0.301</td></tr>
+    <tr><td>Fracture</td><td class="num">0.536</td><td class="num">0.803</td><td class="num up">+0.267</td></tr>
+    <tr class="total"><td>Macro AUC</td><td class="num">0.686</td><td class="num">0.784</td><td class="num up">+0.097</td></tr>
+  </tbody>
+</table>
+</div>
+<p style="margin-top:12px">
+  Five-fold mean macro AUC rose from 0.724 to 0.812, and every individual fold improved. Brier score fell from
+  0.197 to 0.160. Source: <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/reports/training">reports/training</a>.
+</p>
+<p class="note">
+  With 58 validation studies, these numbers carry wide uncertainty. They guided engineering decisions; they are not
+  a leaderboard score, and this is not a clinical tool.
+</p>
+
+<h2 id="code">Code walkthrough</h2>
+<p>Two excerpts from the repository, unmodified apart from trimmed input checks. Everything else is one click away on GitHub.</p>
+
+<h3>Target-specific attention over slices and series</h3>
+<p>
+  Each finding gets its own attention weights, so the ACL head can focus on sagittal slices through the notch while
+  the effusion head looks at the suprapatellar recess. Series metadata (plane, fluid sensitivity, fat suppression)
+  is fused before series-level pooling.
+</p>
+<figure class="code">
+  <figcaption><span>src/rsna/imaging_training.py · forward pass</span>
+    <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/imaging_training.py#L616-L710">View full source</a></figcaption>
+<pre><code class="language-python">features = self.slice_projection(self._encode(images, encoder_chunk_size))
+series_target_features: list[Any] = []
+offset = 0
+for length in series_lengths:
+    part = features[offset : offset + length]
+    scores = self.slice_attention(part)
+    weights = torch.softmax(scores, dim=0)
+    series_target_features.append(torch.einsum("st,sd->td", weights, part))
+    offset += length
+stacked = torch.stack(series_target_features, dim=0)
+expanded_metadata = metadata[:, None, :].expand(-1, len(TARGET_COLUMNS), -1)
+enriched = self.series_projection(
+    torch.cat([stacked, expanded_metadata], dim=-1)
+)
+series_scores = torch.einsum(
+    "rtd,td->rt", enriched, self.series_queries
+) / math.sqrt(feature_dimension)
+series_weights = torch.softmax(series_scores, dim=0)
+study_features = torch.einsum("rt,rtd->td", series_weights, enriched)
+return torch.sum(study_features * self.head_weight, dim=-1) + self.head_bias</code></pre>
+</figure>
+
+<h3>Rank-averaged fold ensemble</h3>
+<p>
+  Pooled out-of-fold analysis showed that fold checkpoints rank studies well but disagree on score scale.
+  Averaging percentile ranks per target instead of raw probabilities removes that drift at test time without using labels.
+</p>
+<figure class="code">
+  <figcaption><span>src/rsna/imaging_inference.py</span>
+    <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/imaging_inference.py#L54-L89">View full source</a></figcaption>
+<pre><code class="language-python">def _percentile_ranks(values: np.ndarray) -&gt; np.ndarray:
+    """Return average percentile ranks with deterministic tie handling."""
+    order = np.argsort(values, kind="stable")
+    sorted_values = values[order]
+    ranks = np.empty(len(values), dtype=np.float64)
+    start = 0
+    while start &lt; len(values):
+        stop = start + 1
+        while stop &lt; len(values) and sorted_values[stop] == sorted_values[start]:
+            stop += 1
+        ranks[order[start:stop]] = (start + stop - 1) / 2.0
+        start = stop
+    return (ranks + 0.5) / len(values)
+
+
+def rank_average_probabilities(model_probabilities: Any) -&gt; np.ndarray:
+    """Normalize each model/target score scale before ensemble averaging."""
+    values = np.asarray(model_probabilities, dtype=np.float64)
+    ranked = np.empty_like(values)
+    for model_index in range(values.shape[0]):
+        for target_index in range(values.shape[2]):
+            ranked[model_index, :, target_index] = _percentile_ranks(
+                values[model_index, :, target_index]
+            )
+    return np.mean(ranked, axis=0)</code></pre>
+</figure>
+
+<h3>Full source map</h3>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Module</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/dicom_audit.py">dicom_audit.py</a></td><td class="desc">Read-only, resumable DICOM inventory and decoder audit</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/dicom_loader.py">dicom_loader.py</a></td><td class="desc">Geometry-aware, bounded-memory DICOM series loading</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/orientation_audit.py">orientation_audit.py</a></td><td class="desc">Per-slice orientation variation analysis</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/physical_geometry_audit.py">physical_geometry_audit.py</a></td><td class="desc">Pixel spacing and physical field-of-view audit</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/pixel_integrity.py">pixel_integrity.py</a></td><td class="desc">Series exclusion policy from exhaustive pixel decoding</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/preprocessing_cache.py">preprocessing_cache.py</a></td><td class="desc">Resumable full-cohort preprocessing and tensor caching</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/report_extractor.py">report_extractor.py</a></td><td class="desc">Multilingual LLM extraction of findings from radiology reports</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/weak_label_benchmark.py">weak_label_benchmark.py</a></td><td class="desc">Benchmark and ensemble report-derived labels against gold</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/gold_folds.py">gold_folds.py</a></td><td class="desc">Deterministic, leakage-safe multilabel folds</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/imaging_training.py">imaging_training.py</a></td><td class="desc">Multi-series model, weak pretraining, and fold fine-tuning</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/oof_evaluation.py">oof_evaluation.py</a></td><td class="desc">Strict pooled out-of-fold evaluation</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/evaluation.py">evaluation.py</a></td><td class="desc">Competition metrics implemented from scratch</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/imaging_inference.py">imaging_inference.py</a></td><td class="desc">Offline multi-checkpoint inference and rank ensemble</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/submission.py">submission.py</a></td><td class="desc">Strict submission generation and validation</td></tr>
+    <tr><td><a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/kaggle_package.py">kaggle_package.py</a></td><td class="desc">Self-contained offline Kaggle model package</td></tr>
+  </tbody>
+</table>
+</div>
+<p style="margin-top:12px">
+  Also in the repository: <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/scripts">18 pipeline scripts</a>,
+  <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/notebooks">7 notebooks</a>, and
+  <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/tests">21 pytest test modules</a>.
+</p>
+
+<h2 id="stack">Tools</h2>
+<p>
+  Python, PyTorch, DINOv2, Hugging Face Transformers (Qwen2.5-3B-Instruct), pydicom, NumPy, pandas, pytest, Jupytext,
+  and Google Cloud Spot L4 GPUs with checkpointed, resumable training runs.
+</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Designed, built, and written by Shaurya Attreya.</b>
+      <a href="https://github.com/ShauryaAttreya37">github.com/ShauryaAttreya37</a></p>
+    <p>© 2026 Shaurya Attreya. Code released under the
+      <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/LICENSE">MIT License</a>; reuse must keep this copyright notice.</p>
+    <p>Data: RSNA and Kaggle (not redistributed). Pretrained models: DINOv2 (Meta AI), Qwen2.5 (Alibaba Cloud).
+      Three public CC0 weak-label sets were shared by fellow Kaggle competitors.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

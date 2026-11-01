@@ -1,0 +1,93 @@
+{
+  "shapes": {
+    "train": [
+      4407,
+      14
+    ],
+    "train_series": [
+      24371,
+      5
+    ],
+    "test": [
+      3,
+      1
+    ],
+    "test_series": [
+      15,
+      5
+    ],
+    "sample_submission": [
+      3,
+      13
+    ]
+  },
+  "columns": {
+    "train": [
+      "StudyInstanceUID",
+      "Report",
+      "ACL",
+      "MCL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Synovitis",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "train_series": [
+      "StudyInstanceUID",
+      "SeriesInstanceUID",
+      "Fluid_Sensitive",
+      "Fat_Suppression",
+      "Anatomical_Plane"
+    ],
+    "test": [
+      "StudyInstanceUID"
+    ],
+    "test_series": [
+      "StudyInstanceUID",
+      "SeriesInstanceUID",
+      "Fluid_Sensitive",
+      "Fat_Suppression",
+      "Anatomical_Plane"
+    ],
+    "sample_submission": [
+      "StudyInstanceUID",
+      "ACL",
+      "MCL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Synovitis",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ]
+  },
+  "gold_label_rows": {
+    "any_gold_label": 58,
+    "every_gold_label": 58,
+    "no_gold_labels": 4349,
+    "missing_reports": 0
+  },
+  "series_overview": {
+    "training_studies": 4407,
+    "training_studies_in_series_csv": 4407,
+    "training_series": 24371,
+    "test_studies": 3,
+    "test_series": 15
+  },
+  "identifier_integrity": {
+    "train_studies_missing_series": 0,
+    "series_studies_missing_train_rows": 0,
+    "test_studies_missing_series": 0,
+    "series_studies_missing_test_rows": 0
+  }
+}

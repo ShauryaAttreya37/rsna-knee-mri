@@ -1,0 +1,169 @@
+{
+  "categorical_counts": {
+    "dimensions": {
+      "512x512": 195,
+      "640x1280": 160,
+      "640x512": 30,
+      "640x640": 54,
+      "672x672": 24,
+      "800x800": 30,
+      "896x896": 30,
+      "960x960": 34
+    },
+    "fit_and_pad_resized_shapes": {
+      "112x224": 1,
+      "224x179": 1,
+      "224x224": 13
+    },
+    "photometric_interpretations": {
+      "MONOCHROME2": 557
+    },
+    "planes": {
+      "Axial": 4,
+      "Coronal": 4,
+      "Sagittal": 7
+    },
+    "sort_strategies": {
+      "consensus_geometry": 15
+    },
+    "transfer_syntaxes": {
+      "1.2.840.10008.1.2.1": 557
+    }
+  },
+  "configuration": {
+    "anatomy_cropping": false,
+    "max_normal_angle_degrees": 1.0,
+    "normalization_percentiles": [
+      1.0,
+      99.0
+    ],
+    "output_size": 224,
+    "sampled_slices_per_series": 16,
+    "spatial_transform": "physical_full_fov_aspect_fit_zero_pad"
+  },
+  "counts": {
+    "decoded_pixel_arrays": 557,
+    "sampled_series_tensors": 15,
+    "series": 15,
+    "test_studies": 3
+  },
+  "distributions": {
+    "effective_output_spacing_mm": {
+      "count": 15,
+      "max": 1.4285714285714286,
+      "mean": 0.7976323809523808,
+      "min": 0.6694285714285714,
+      "p50": 0.7588571428571429,
+      "p95": 1.053571428571428
+    },
+    "max_normal_angle_degrees": {
+      "count": 15,
+      "max": 8.537736462515939e-07,
+      "mean": 1.1383648616687918e-07,
+      "min": 0.0,
+      "p50": 0.0,
+      "p95": 8.537736462515939e-07
+    },
+    "normalization_high": {
+      "count": 15,
+      "max": 7535.0,
+      "mean": 2233.0666666666666,
+      "min": 219.0,
+      "p50": 1816.0,
+      "p95": 5813.699999999997
+    },
+    "normalization_low": {
+      "count": 15,
+      "max": 4.0,
+      "mean": -0.06666666666666667,
+      "min": -6.0,
+      "p50": 0.0,
+      "p95": 1.8999999999999968
+    },
+    "normalized_mean": {
+      "count": 15,
+      "max": 0.449364777405685,
+      "mean": 0.2823776524340349,
+      "min": 0.12185132299115456,
+      "p50": 0.2955447105179999,
+      "p95": 0.3972688474692836
+    },
+    "padded_fraction": {
+      "count": 15,
+      "max": 0.5,
+      "mean": 0.04672619047619047,
+      "min": 0.0,
+      "p50": 0.0,
+      "p95": 0.29062499999999963
+    },
+    "physical_fov_column_mm": {
+      "count": 15,
+      "max": 320.0,
+      "mean": 176.0029866666667,
+      "min": 149.952,
+      "p50": 169.984,
+      "p95": 222.02239999999983
+    },
+    "physical_fov_row_mm": {
+      "count": 15,
+      "max": 200.0,
+      "mean": 168.0029866666667,
+      "min": 149.952,
+      "p50": 169.984,
+      "p95": 186.02239999999998
+    },
+    "pixel_spacing_column_mm": {
+      "count": 15,
+      "max": 0.3516,
+      "mean": 0.28006666666666663,
+      "min": 0.1562,
+      "p50": 0.293,
+      "p95": 0.3516
+    },
+    "pixel_spacing_row_mm": {
+      "count": 15,
+      "max": 0.3516,
+      "mean": 0.28006666666666663,
+      "min": 0.1562,
+      "p50": 0.293,
+      "p95": 0.3516
+    },
+    "series_per_study": {
+      "count": 3,
+      "max": 5.0,
+      "mean": 5.0,
+      "min": 5.0,
+      "p50": 5.0,
+      "p95": 5.0
+    },
+    "slices_per_series": {
+      "count": 15,
+      "max": 160.0,
+      "mean": 37.13333333333333,
+      "min": 24.0,
+      "p50": 30.0,
+      "p95": 75.99999999999987
+    }
+  },
+  "generated_at": "2026-08-28T09:58:07.012880+00:00",
+  "offline": true,
+  "privacy": "Identifier-free aggregate loader statistics only; no study, series, SOP identifiers, pixel arrays, or report text are included.",
+  "runtime": {
+    "decoded_images_per_second": 30.788056856859843,
+    "elapsed_seconds": 18.091430797000612,
+    "scope_warning": "The three-study example is too small for a hidden-test runtime projection; benchmark a representative train-derived cohort next. The primary transform retains the complete physical field of view; the optional 140 mm detail view is not part of this benchmark."
+  },
+  "status": "pass",
+  "submission_validation": {
+    "columns_exact": true,
+    "identifiers_in_sample_order": true,
+    "identifiers_match_test_set": true,
+    "identifiers_unique": true,
+    "maximum_probability": 0.5,
+    "minimum_probability": 0.5,
+    "probabilities_finite": true,
+    "probabilities_in_range": true,
+    "rows": 3,
+    "targets": 12
+  }
+}

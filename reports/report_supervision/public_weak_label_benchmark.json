@@ -1,0 +1,104 @@
+{
+  "best_by_observed_gold_macro_auc": "equal_mean_all",
+  "candidates": {
+    "equal_mean_all": {
+      "binary_accuracy": 0.8172514619883041,
+      "brier_score": 0.14444056509909028,
+      "gold_studies_covered": 57,
+      "macro_auc": 0.8955855311478073,
+      "per_target_auc": {
+        "ACL": 0.989769820971867,
+        "Baker's": 0.9453703703703704,
+        "Contusion": 0.853988603988604,
+        "Effusion": 0.8759590792838875,
+        "Fracture": 0.8147058823529412,
+        "Lateral Meniscus": 0.8804347826086957,
+        "Lateral OA": 0.8073122529644269,
+        "MCL": 0.9791666666666666,
+        "Medial Meniscus": 0.957196029776675,
+        "Medial OA": 0.930952380952381,
+        "PF OA": 0.897972972972973,
+        "Synovitis": 0.8141975308641975
+      }
+    },
+    "gpt56sol": {
+      "binary_accuracy": 0.8160919540229885,
+      "brier_score": 0.17028735632183906,
+      "gold_studies_covered": 58,
+      "macro_auc": 0.8351939306701702,
+      "per_target_auc": {
+        "ACL": 0.9313725490196079,
+        "Baker's": 0.9030797101449275,
+        "Contusion": 0.8144399460188934,
+        "Effusion": 0.6956521739130435,
+        "Fracture": 0.8013888888888889,
+        "Lateral Meniscus": 0.8664596273291926,
+        "Lateral OA": 0.8239845261121856,
+        "MCL": 0.9206349206349206,
+        "Medial Meniscus": 0.8900240384615384,
+        "Medial OA": 0.8914728682170543,
+        "PF OA": 0.8075933075933076,
+        "Synovitis": 0.6762246117084827
+      }
+    },
+    "pilkwang_v2": {
+      "binary_accuracy": 0.7953216374269005,
+      "brier_score": 0.1462485380116959,
+      "gold_studies_covered": 57,
+      "macro_auc": 0.8700395897324982,
+      "per_target_auc": {
+        "ACL": 0.9974424552429667,
+        "Baker's": 0.9324074074074075,
+        "Contusion": 0.7678062678062678,
+        "Effusion": 0.829923273657289,
+        "Fracture": 0.8713235294117647,
+        "Lateral Meniscus": 0.8414322250639387,
+        "Lateral OA": 0.7885375494071146,
+        "MCL": 0.9756944444444444,
+        "Medial Meniscus": 0.9429280397022333,
+        "Medial OA": 0.9079365079365079,
+        "PF OA": 0.8912162162162162,
+        "Synovitis": 0.6938271604938272
+      }
+    },
+    "steven_v4": {
+      "binary_accuracy": 0.8175287356321839,
+      "brier_score": 0.1550472970545977,
+      "gold_studies_covered": 58,
+      "macro_auc": 0.8927073353343263,
+      "per_target_auc": {
+        "ACL": 0.9871323529411765,
+        "Baker's": 0.9438405797101449,
+        "Contusion": 0.8596491228070176,
+        "Effusion": 0.8770186335403727,
+        "Fracture": 0.7930555555555555,
+        "Lateral Meniscus": 0.8788819875776398,
+        "Lateral OA": 0.8326885880077369,
+        "MCL": 0.9682539682539683,
+        "Medial Meniscus": 0.9483173076923077,
+        "Medial OA": 0.931782945736434,
+        "PF OA": 0.9015444015444015,
+        "Synovitis": 0.7903225806451613
+      }
+    }
+  },
+  "generated_at": "2026-09-05T15:10:18.500365+00:00",
+  "gold_studies": 58,
+  "privacy": "Identifier-free aggregate metrics only.",
+  "selection_warning": "The 58-study gold set is small; use these metrics as a label-source gate, not as an unbiased estimate of leaderboard performance.",
+  "status": "complete",
+  "targets": [
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ]
+}
