@@ -6,6 +6,9 @@
 <title>Knee MRI Detection · Shaurya Attreya</title>
 <meta name="description" content="Weakly supervised, multi-series knee MRI abnormality detection for the RSNA 2026 Kaggle challenge. Project and code by Shaurya Attreya.">
 <meta name="author" content="Shaurya Attreya">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" media="(prefers-color-scheme: light)">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" media="(prefers-color-scheme: dark)">
 <style>
@@ -23,11 +26,17 @@
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0; background: var(--bg); color: var(--fg);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font: 17px/1.65 "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
+  h1, h2, h3, .stat b, .btn, th {
+    font-family: "Space Grotesk", "Hanken Grotesk", -apple-system, "Segoe UI", sans-serif;
+    letter-spacing: -0.01em;
+  }
+  h1 { letter-spacing: -0.025em; }
   main, header .wrap, footer .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
   header { border-bottom: 1px solid var(--line); padding: 48px 0 32px; }
-  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  h1 { font-size: 2.4rem; line-height: 1.1; margin: 0 0 10px; font-weight: 700; }
   h2 { font-size: 1.35rem; margin: 48px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
   h3 { font-size: 1.05rem; margin: 28px 0 8px; }
   p { margin: 0 0 14px; }
@@ -59,7 +68,7 @@
   td.down { color: var(--warn); }
   tr.total td { font-weight: 600; background: var(--soft); }
   td.desc { white-space: normal; min-width: 260px; }
-  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .88em; }
+  code { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .86em; font-variant-ligatures: none; }
   :not(pre) > code { background: var(--soft); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
   pre { margin: 0; overflow-x: auto; }
   pre code.hljs { padding: 14px 16px; font-size: .84rem; line-height: 1.5; background: var(--soft); }
