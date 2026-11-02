@@ -15,11 +15,13 @@
   :root {
     --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --line: #d1d9e0;
     --soft: #f6f8fa; --accent: #0b6bcb; --good: #1a7f37; --warn: #9a6700;
+    --viz-before: #4a90e2;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --line: #30363d;
       --soft: #151b23; --accent: #4493f8; --good: #3fb950; --warn: #d29922;
+      --viz-before: #3a70b8;
     }
   }
   * { box-sizing: border-box; }
@@ -80,6 +82,57 @@
   .note { border-left: 3px solid var(--line); padding: 4px 0 4px 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 28px 0 40px; color: var(--muted); font-size: .92rem; }
   footer p { margin: 0 0 6px; }
+  figure.viz { margin: 20px 0 28px; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+  figure.viz figcaption { margin-bottom: 12px; }
+  figure.viz figcaption b { display: block; font-family: "Space Grotesk", "Hanken Grotesk", sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+  figure.viz figcaption span { color: var(--muted); font-size: .92rem; }
+  .viz-source { margin: 12px 0 0; color: var(--muted); font-size: .85rem; overflow-wrap: anywhere; }
+  figure.viz details { margin-top: 12px; font-size: .9rem; }
+  figure.viz summary { cursor: pointer; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+  figure.viz summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  [data-chart] svg { display: block; width: 100%; overflow: visible; }
+  [data-chart="prevalence"] { min-height: 340px; }
+  [data-chart="crop_coverage"] { min-height: 334px; }
+  [data-chart="label_quality"], [data-chart="finding_auc"] { min-height: 424px; }
+  [data-chart="fold_auc"] { min-height: 214px; }
+  .viz-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 10px; font-size: .85rem; color: var(--muted); }
+  .viz-legend-item { display: inline-flex; align-items: center; gap: 6px; }
+  .viz-key { display: inline-block; flex: none; width: 14px; height: 0; border-top: 2px solid transparent; }
+  .viz-key-before, .viz-key-after { width: 10px; height: 10px; border: 2px solid var(--viz-before); border-radius: 50%; background: var(--bg); }
+  .viz-key-after { border-color: var(--accent); background: var(--accent); }
+  .viz-key-link { border-top-color: var(--line); }
+  .viz-key-drop { border-top-color: var(--warn); }
+  .viz-key-line-after { border-top-color: var(--accent); }
+  .viz-key-line-before { border-top-color: var(--viz-before); }
+  .viz-grid { stroke: var(--line); stroke-width: 1; opacity: .6; }
+  .viz-axis, .viz-limit { stroke: var(--muted); stroke-width: 1; }
+  .viz-crosshair { stroke: var(--muted); stroke-width: 1; pointer-events: none; }
+  .viz-tick, .viz-note { fill: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; pointer-events: none; }
+  .viz-label { fill: var(--fg); font-size: 13px; pointer-events: none; }
+  .viz-value { fill: var(--fg); font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums; pointer-events: none; }
+  .viz-hit { fill: transparent; cursor: default; outline: none; }
+  .viz-hit:hover, .viz-hit:focus { fill: var(--muted); fill-opacity: .12; }
+  .viz-hit:focus-visible { stroke: var(--accent); stroke-width: 2; }
+  .viz-bar { fill: var(--accent); pointer-events: none; }
+  .viz-link { stroke: var(--line); stroke-width: 2; stroke-linecap: round; pointer-events: none; }
+  .viz-link-drop { stroke: var(--warn); }
+  .viz-dot-before { fill: var(--bg); stroke: var(--viz-before); stroke-width: 2; pointer-events: none; }
+  .viz-dot-after { fill: var(--accent); stroke: var(--bg); stroke-width: 2; pointer-events: none; }
+  .viz-line-before, .viz-line-after { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; }
+  .viz-line-before { stroke: var(--viz-before); }
+  .viz-line-after { stroke: var(--accent); }
+  .viz-point-before, .viz-point-after { stroke: var(--bg); stroke-width: 2; pointer-events: none; }
+  .viz-point-before { fill: var(--viz-before); }
+  .viz-point-after { fill: var(--accent); }
+  .viz-tooltip { position: fixed; z-index: 10; max-width: 280px; padding: 8px 10px; pointer-events: none; font-size: .85rem; line-height: 1.4; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 4px 14px rgba(0, 0, 0, .18); }
+  .viz-tooltip[hidden] { display: none; }
+  .viz-tooltip-title { color: var(--muted); margin-bottom: 4px; }
+  .viz-tooltip-row { display: flex; align-items: center; gap: 6px; }
+  .viz-tooltip-row strong { font-variant-numeric: tabular-nums; }
+  .viz-tooltip-name { color: var(--muted); }
+  .viz-tooltip .viz-key-before, .viz-tooltip .viz-key-after { width: 14px; height: 0; border-width: 2px 0 0; border-radius: 0; background: none; }
+  .viz-key-none { width: 14px; }
+  @media (max-width: 520px) { figure.viz { padding: 12px; } }
   @media (max-width: 520px) { h1 { font-size: 1.6rem; } header { padding-top: 32px; } }
 </style>
 </head>
@@ -123,6 +176,15 @@
   original radiology report, often not in English, but reports are <em>not</em> available at test time,
   so the final model must work from images alone.
 </p>
+<noscript><p class="note">The charts on this page need JavaScript. Their numbers are in
+  <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/reports">reports/</a>.</p></noscript>
+<figure class="viz">
+  <figcaption><b>Validation has few positives per finding</b>
+    <span>Positive studies among the 58 expert-labeled studies. Rarer findings give each AUC less evidence.</span></figcaption>
+  <div data-chart="prevalence"></div>
+  <details data-table="prevalence"></details>
+  <p class="viz-source">Source: <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/reports/data_audit/label_summary.csv">reports/data_audit/label_summary.csv</a></p>
+</figure>
 
 <h2 id="approach">Approach</h2>
 <ol class="pipeline">
@@ -150,11 +212,47 @@
     <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/src/rsna/submission.py">submission.py</a>)</li>
 </ol>
 
+<h3>Preprocessing: why the full field of view stays primary</h3>
+<p>
+  Scanners differ widely. Across 24,386 series, the shorter in-plane field of view spans 70 to 310 mm, with the middle
+  90% between 140 and 182 mm, and pixel spacing runs from 0.17 to 0.56 mm over the same percentiles. A fixed crop would cut
+  anatomy from some series and pad others, so every series is fit into 224 × 224 by physical size with symmetric padding.
+  A square crop is only an optional detail view, and the audit picked its size: the largest candidate that needs no padding
+  for at least 90% of series, overall and in every plane.
+</p>
+<figure class="viz">
+  <figcaption><b>140 mm is the largest crop that clears the 90% bar</b>
+    <span>Share of series covered without padding, at each of five candidate crop sizes.</span></figcaption>
+  <div data-chart="crop_coverage"></div>
+  <details data-table="crop_coverage"></details>
+  <p class="viz-source">Source: <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/reports/dicom_audit/physical_geometry_summary.json">reports/dicom_audit/physical_geometry_summary.json</a></p>
+</figure>
+
+<h3>Weak labels: which source to trust</h3>
+<p>
+  Scoring each label source against the expert labels came before any imaging change. The ensemble beat the Qwen extractor on
+  all twelve findings, with macro AUC 0.896 against 0.753. The ensemble covers 57 of the 58 gold studies; Qwen covers all 58.
+  This comparison chose a label source. It does not estimate leaderboard performance.
+</p>
+<figure class="viz">
+  <figcaption><b>The label ensemble tracks expert labels more closely on every finding</b>
+    <span>AUC of each weak-label source against gold labels, ordered by ensemble AUC. Axis starts at 0.5, chance level.</span></figcaption>
+  <div data-chart="label_quality"></div>
+  <details data-table="label_quality"></details>
+  <p class="viz-source">Sources: <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/reports/report_supervision/gold_benchmark_summary.json">gold_benchmark_summary.json</a>,
+    <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/reports/report_supervision/public_weak_label_benchmark.json">public_weak_label_benchmark.json</a></p>
+</figure>
+
 <h2 id="results">Results</h2>
 <p>
   Out-of-fold AUC pooled across all 58 gold studies, where every prediction comes from a model that never saw that study.
   Between v1 and v2, <b>only the weak-label source changed</b>; architecture, cache, folds, and fine-tuning settings were held fixed.
 </p>
+<figure class="viz">
+  <figcaption><b>Better labels lifted nine of twelve findings; three dropped</b>
+    <span>Pooled out-of-fold AUC per finding, ordered by v2 AUC. Axis starts at 0.5, chance level. The table below lists every value.</span></figcaption>
+  <div data-chart="finding_auc"></div>
+</figure>
 <div class="tablewrap">
 <table>
   <thead><tr><th>Finding</th><th class="num">v1: Qwen labels</th><th class="num">v2: label ensemble</th><th class="num">Change</th></tr></thead>
@@ -179,6 +277,12 @@
   Five-fold mean macro AUC rose from 0.724 to 0.812, and every individual fold improved. Brier score fell from
   0.197 to 0.160. Source: <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/reports/training">reports/training</a>.
 </p>
+<figure class="viz">
+  <figcaption><b>Every fold improved, by 0.049 to 0.167</b>
+    <span>Best held-out macro AUC per fold. Each fold holds only 11 or 12 studies, so single-fold values are noisy.</span></figcaption>
+  <div data-chart="fold_auc"></div>
+  <details data-table="fold_auc"></details>
+</figure>
 <p class="note">
   With 58 validation studies, these numbers carry wide uncertainty. They guided engineering decisions; they are not
   a leaderboard score, and this is not a clinical tool.
@@ -279,7 +383,7 @@ def rank_average_probabilities(model_probabilities: Any) -&gt; np.ndarray:
 <p style="margin-top:12px">
   Also in the repository: <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/scripts">18 pipeline scripts</a>,
   <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/notebooks">7 notebooks</a>, and
-  <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/tests">21 pytest test modules</a>.
+  <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/tree/main/tests">22 pytest test modules</a>.
 </p>
 
 <h2 id="stack">Tools</h2>
@@ -298,11 +402,14 @@ def rank_average_probabilities(model_probabilities: Any) -&gt; np.ndarray:
       <a href="https://github.com/ShauryaAttreya37/rsna-knee-mri/blob/main/LICENSE">MIT License</a>; reuse must keep this copyright notice.</p>
     <p>Data: RSNA and Kaggle (not redistributed). Pretrained models: DINOv2 (Meta AI), Qwen2.5 (Alibaba Cloud).
       Three public CC0 weak-label sets were shared by fellow Kaggle competitors.</p>
+    <p>All charts are built from identifier-free aggregate reports. No patient images or per-study results appear on this page.</p>
   </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
 <script>hljs.highlightAll();</script>
+<script src="figure-data.js"></script>
+<script src="figures.js"></script>
 </body>
 </html>
